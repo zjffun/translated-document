@@ -1,0 +1,359 @@
+[
+  {
+    "id": "xeqbrbldro",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      1,
+      18
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      1,
+      18
+    ]
+  },
+  {
+    "id": "t30sq6wto8",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      20,
+      20
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      20,
+      20
+    ]
+  },
+  {
+    "id": "330t496j5v",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      22,
+      33
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      22,
+      33
+    ]
+  },
+  {
+    "id": "qsd9ukat80",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      35,
+      37
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      35,
+      37
+    ]
+  },
+  {
+    "id": "uljppyjw60",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      39,
+      53
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      39,
+      53
+    ]
+  },
+  {
+    "id": "m4za1z024v",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      55,
+      62
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      55,
+      63
+    ]
+  },
+  {
+    "id": "e5plfvd92f",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      64,
+      66
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      65,
+      67
+    ]
+  },
+  {
+    "id": "1qd05rgfye",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      68,
+      70
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      69,
+      71
+    ]
+  },
+  {
+    "id": "6au27snubl",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      72,
+      74
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      73,
+      75
+    ]
+  },
+  {
+    "id": "cu1qito20w",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      76,
+      78
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      77,
+      79
+    ]
+  },
+  {
+    "id": "l94zlbo2qn",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      80,
+      82
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      81,
+      83
+    ]
+  },
+  {
+    "id": "3eznua6kak",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      84,
+      86
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      85,
+      87
+    ]
+  },
+  {
+    "id": "blli5mvg3p",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      88,
+      90
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      89,
+      91
+    ]
+  },
+  {
+    "id": "9szsfwee8o",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      92,
+      94
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      93,
+      95
+    ]
+  },
+  {
+    "id": "geeo7wd604",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      96,
+      118
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      97,
+      119
+    ]
+  },
+  {
+    "id": "ddmiconk1d",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      120,
+      130
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      121,
+      132
+    ]
+  },
+  {
+    "id": "0x4mlhvysy",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      132,
+      140
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      134,
+      142
+    ]
+  },
+  {
+    "id": "rrs18hohy9",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      142,
+      152
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      144,
+      154
+    ]
+  },
+  {
+    "id": "71x8hinfqf",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      154,
+      162
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      156,
+      164
+    ]
+  },
+  {
+    "id": "oqp1znxi9g",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      164,
+      182
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      166,
+      184
+    ]
+  },
+  {
+    "id": "358iyd79a7",
+    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "fromPath": "files/en-us/github-gist/pure-esm-package.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      184,
+      202
+    ],
+    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
+    "toBaseDir": "",
+    "toRange": [
+      186,
+      204
+    ]
+  }
+]
