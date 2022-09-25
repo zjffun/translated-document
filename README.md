@@ -1,2 +1,3 @@
 # translated-document
-Real-time follow-up translation.
+
+Real-time follow-up document translation.
