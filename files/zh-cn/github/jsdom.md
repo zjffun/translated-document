@@ -3,7 +3,7 @@
     jsdom
 </h1>
 
-jsdom 是一个纯粹由 JavaScript 实现的一系列 web 标准，特别是 WHATWG 组织制定的 [DOM](https://dom.spec.whatwg.org/) 和 [HTML](https://html.spec.whatwg.org/multipage/) 标准，用于在 Node.js 中使用。大体上来说，该项目的目标是模拟足够的 web 浏览器子集，以便用于测试和挖掘真实世界的 web 应用程序。
+jsdom 是一个纯粹由 JavaScript 实现的一系列 Web 标准，特别是 WHATWG 组织制定的 [DOM](https://dom.spec.whatwg.org/) 和 [HTML](https://html.spec.whatwg.org/multipage/) 标准，用于在 Node.js 中使用。大体上来说，该项目的目标是模拟足够的 Web 浏览器子集，以便用于测试和挖掘真实世界的 Web 应用程序。
 
 最新版本的 jsdom 运行环境需要 Node.js v14 或者更高的版本。（jsdom v20 以下版本依旧可以在 Node.js 以前的版本使用，但是我们已经不支持维护了）
 
@@ -53,7 +53,7 @@ const dom = new JSDOM(``, {
 
 - `url` 设置的值可以通过 `window.location`，`document.URL` 和 `document.documentURI` 来返回，并会影响文档中相关 URL 的解析以及获取子资源时使用的同源限制和 referrer。默认值为`"about:blank"`。
 - `referrer` 仅仅影响 `document.referrer` 的值。默认没有引用（即为空字符串）。
-- `contentType` 影响 `document.contentType` 的值，是按照 HTML 解析文档还是 XML 来解析。它的值如果不是 [HTML MIME 类型](https://mimesniff.spec.whatwg.org/#html-mime-type) 或 [XML MIME 类型](https://mimesniff.spec.whatwg.org/#xml-mime-type) 值的话将会抛出异常。默认值为`"text/html"`。如果存在 `charset` 参数，它会影响 [二进制数据处理](#encoding-sniffing)。
+- `contentType` 影响 `document.contentType` 的值，是按照 HTML 解析文档还是 XML 来解析。它的值如果不是 [HTML MIME 类型](https://mimesniff.spec.whatwg.org/#html-mime-type) 或 [XML MIME 类型](https://mimesniff.spec.whatwg.org/#xml-mime-type) 值的话将会抛出异常。默认值为`"text/html"`。如果存在 `charset` 参数，它会影响[二进制数据处理](#编码嗅探)。
 - `includeNodeLocations` 保留由 HTML 解析器生成的位置信息，允许您使用 `nodeLocation()` 方法（如下所述）检索它。它还能确保在 `<script>` 元素内运行的代码的异常堆栈跟踪中报告的行号是正确的。默认值为 `false` 以提供最佳性能，并且不能与 XML 内容类型一起使用，因为我们的 XML 解析器不支持位置信息。
 
 请注意，`url` 和 `referrer` 在使用之前已经被规范化了，例如：如果你传入 `"https:example.com"`，jsdom 会自动规范化解释为 `"https://example.com/"`。如果你传递了一个不可解析的 URL，该调用将抛出错误。（URL 根据[URL 标准](https://url.spec.whatwg.org/)进行分析和序列化。）
@@ -86,7 +86,7 @@ dom.window.document.body.children.length === 2;
 
 我们再次强调只有在提供给 jsdom 的代码是你已知道是安全的才可使用它。如果您运行了任意用户提供的或 Internet 上的不可信的 Node.js 代码，可能会危及您的计算机。
 
-假如你想通过 `<script src="">` 来执行外部脚本，你需要确保已经加载了它们。为此，请添加选项 `resources: "usable"` [如下所述](#loading-subresources)。（出于此处讨论的原因，您可能还需要设置 `url` 选项。）
+假如你想通过 `<script src="">` 来执行外部脚本，你需要确保已经加载了它们。为此，请添加选项 `resources: "usable"` [如下所述](#加载子资源)。（出于此处讨论的原因，您可能还需要设置 `url` 选项。）
 
 除非 `runScripts` 设置为 `"dangerously"`，否则事件处理属性（如`<div onclick="">`）也将受此选项控制不起作用。（但是，事件处理函数属性，比如 `div.onclick = ...`，将忽略 `runScripts` 参数并且会起作用。）
 
@@ -125,7 +125,7 @@ window.requestAnimationFrame(timestamp => {
 });
 ```
 
-请注意，jsdom 仍然[不做任何布局或渲染](#unimplemented-parts-of-the-web-platform)，因此这实际上只是假装为可视化，而不是实现真正的可视化 web 浏览器将实现的部分。
+请注意，jsdom 仍然[不做任何布局或渲染](#未实现的-web-平台部分)，因此这实际上只是假装为可视化，而不是实现真正的可视化 Web 浏览器将实现的部分。
 
 ### 加载子资源
 
@@ -136,9 +136,9 @@ window.requestAnimationFrame(timestamp => {
 - 通过 `<frame>` 和 `<iframe>` 加载 frame 和 iframe
 - 通过 `<link rel="stylesheet">` 加载样式
 - 通过 `<script>` 加载脚本，但是前提是 `runScripts: "dangerously"` 设置了
-- 通过 `<img>` 加载图片，但是前提是 `canvas` npm 包已安装（详见下面的 [Canvas 支持](#canvas-support)）
+- 通过 `<img>` 加载图片，但是前提是 `canvas` npm 包已安装（详见下面的[支持 Canvas](#支持-canvas)）
 
-尝试加载资源时，请记住 `url` 选项的默认值是 `"about:blank"`，这意味着通过相对 URL 包含的任何资源都将无法加载。（针对 URL `about:blank` 解析 URL `/something` 的结果是一个错误。）因此，在这些情况下，您可能希望为 `url` 选项设置一个非默认值，或使用自动执行此操作的 [convenience API](#convenience-apis) 之一。
+尝试加载资源时，请记住 `url` 选项的默认值是 `"about:blank"`，这意味着通过相对 URL 包含的任何资源都将无法加载。（针对 URL `about:blank` 解析 URL `/something` 的结果是一个错误。）因此，在这些情况下，您可能希望为 `url` 选项设置一个非默认值，或使用自动执行此操作的 [convenience API](#便捷的-api) 之一。
 
 #### 高级配置
 
@@ -221,11 +221,11 @@ virtualConsole.on("dir", () => { ... });
 virtualConsole.sendTo(console);
 ```
 
-还有一个特殊的事件，`"jsdomError"`，它的触发将通过错误对象来记录 jsdom 本身的错误。这与错误消息在 web 浏览器控制台中的显示方式类似，即使它们不是由 console.error 输出的。到目前为止，错误会按照下面的方式输出：
+还有一个特殊的事件，`"jsdomError"`，它的触发将通过错误对象来记录 jsdom 本身的错误。这与错误消息在 Web 浏览器控制台中的显示方式类似，即使它们不是由 console.error 输出的。到目前为止，错误会按照下面的方式输出：
 
 - 加载或解析子资源时出错（脚本，样式表，frames 和 iframe）
 - 不是由 window `onerror` 事件处理程序处理的脚本执行错误，它将会返回 `true` 或调用 `event.preventDefault()`
-- 由于调用 jsdom 没有实现的方法而导致的错误，例如 `window.alert`，兼容性的 web 浏览器都实现了这些方法
+- 由于调用 jsdom 没有实现的方法而导致的错误，例如 `window.alert`，兼容性的 Web 浏览器都实现了这些方法
 
 如果您使用 `sendTo(c)` 将错误发送给 `c`，则默认情况下，它将使用来自`"jsdomError"`事件的信息调用 `c.error(errorStack[, errorDetail])`。如果您希望保持事件与方法调用的严格的一对一映射，并且可能自己处理`"jsdomError"`，那么您可以执行
 
@@ -288,7 +288,7 @@ dom.window.document.documentElement.outerHTML === "<html><head></head><body>hell
 
 ### 通过 `nodeLocation(node)` 获取节点的源位置信息
 
-`nodeLocation()` 方法将查找 DOM 节点在源文档中的位置，并返回节点的 [parse5 位置信息](https://www.npmjs.com/package/parse5#options-locationinfo)：
+`nodeLocation()`方法将查找 DOM 节点在源文档中的位置，并返回节点的 [parse5 位置信息](https://www.npmjs.com/package/parse5#options-locationinfo)：
 
 ```js
 const dom = new JSDOM(
@@ -312,15 +312,17 @@ console.log(dom.nodeLocation(imgEl));    // { startOffset: 13, endOffset: 32 }
 
 请注意，只有设置了 `includeNodeLocations` 选项才能使用此功能；由于性能原因这个选项默认为关闭。
 
-### 使用`runVMScript(script)`运行 vm 创建的脚本
+### 使用 `getInternalVMContext()` 与 Node.js `vm` 模块交互
 
-Node.js 的内置 vm 模块允许您创建`Script`实例，这些脚本实例可以提前编译，然后在给定的“VM 上下文”上运行多次。在这个场景背后，jsdom `Window`是一个确定的 VM 上下文。要访问此功能，请使用`runVMScript()`方法：
+Node.js 的内置 [`vm`](https://nodejs.org/api/vm.html) 模块是 jsdom 脚本运行魔法的基础。一些高级用例，例如预编译脚本然后多次运行，可以通过直接使用 `vm` 模块和 jsdom 创建的 `Window` 实现。
+
+可以使用 `getInternalVMContext()` 方法获取与 `vm` API 一起使用的[上下文化的全局对象](https://nodejs.org/api/vm.html#vm_what_does_it_mean_to_contextify_an_object)：
 
 ```js
 const { Script } = require("vm");
 
 const dom = new JSDOM(``, { runScripts: "outside-only" });
-const s = new Script(`
+const script = new Script(`
   if (!this.ran) {
     this.ran = 0;
   }
@@ -328,14 +330,20 @@ const s = new Script(`
   ++this.ran;
 `);
 
-dom.runVMScript(s);
-dom.runVMScript(s);
-dom.runVMScript(s);
+const vmContext = dom.getInternalVMContext();
 
-dom.window.ran === 3;
+script.runInContext(vmContext);
+script.runInContext(vmContext);
+script.runInContext(vmContext);
+
+console.assert(dom.window.ran === 3);
 ```
 
-这是高级功能，除非您有特殊的需求，否则我们建议坚持使用普通的 DOM API（如 window.eval（）或 document.createElement（“script”））。
+这是高级功能，除非您有特殊的需求，否则我们建议坚持使用普通的 DOM API（如 `window.eval()` 或 `document.createElement("script")`）。
+
+请注意，如果在没有设置 `runScripts` 的情况下创建了 `JSDOM` 实例，或者如果您 [在 Web 浏览器中使用 jsdom](#在-web-浏览器中运行-jsdom)，此方法将抛出异常。
+
+
 
 ### 通过`reconfigure(settings)`重新配置 jsdom
 
@@ -351,7 +359,10 @@ const dom = new JSDOM();
 dom.window.top === dom.window;
 dom.window.location.href === "about:blank";
 
-dom.reconfigure({ windowTop: myFakeTopForTesting, url: "https://example.com/" });
+dom.reconfigure({
+  windowTop: myFakeTopForTesting,
+  url: "https://example.com/",
+});
 
 dom.window.top === myFakeTopForTesting;
 dom.window.location.href === "https://example.com/";
@@ -359,14 +370,14 @@ dom.window.location.href === "https://example.com/";
 
 **请注意**，更改 jsdom 的 URL 将影响所有返回当前 document URL 的 API，例如`window.location`，` document.URL``和document.documentURI `，以及文档中相对 URL 的解析以及同源检查和提取子资源时使用的引用。但是，它不会执行导航到该 URL 的内容;DOM 的内容将保持不变，并且不会创建`Window`，`Document`等新的实例。
 
-## 便捷的 APIs
+## 便捷的 API
 
 ### `fromURL()`
 
 除了 JSDOM 构造函数本身之外，jsdom 还提供了一个返回 `Promise` 的工厂方法，用于通过 URL 构建一个 jsdom 实例
 
 ```js
-JSDOM.fromURL("https://example.com/", options).then(dom => {
+JSDOM.fromURL("https://example.com/", options).then((dom) => {
   console.log(dom.serialize());
 });
 ```
@@ -388,7 +399,7 @@ JSDOM.fromURL("https://example.com/", options).then(dom => {
 与`fromURL()`类似，jsdom 还提供了一个`fromFile()`工厂方法，用于从文件名构建 jsdom
 
 ```js
-JSDOM.fromFile("stuff.html", options).then(dom => {
+JSDOM.fromFile("stuff.html", options).then((dom) => {
   console.log(dom.serialize());
 });
 ```
