@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "translated-document",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:zjffun/translated-document.git",
+  "author": "Jufeng Zhang <zjffun@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "relation2-cli": "^0.0.14"
+  }
+}
