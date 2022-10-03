@@ -21,7 +21,7 @@ const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
 console.log(dom.window.document.querySelector("p").textContent); // "Hello world"
 ```
 
-（请注意，jsdom 会像浏览器一样解析您传递的 HTML，包括隐含的 `<html>`，`<head>` 和 `<body>` 标记）
+（请注意，jsdom 会像浏览器一样解析您传递的 HTML，包括隐含的 `<html>`，`<head>` 和 `<body>` 标记。）
 
 生成的对象是 `JSDOM` 类的一个实例，其中包括 `window` 对象在内的许多有用的属性和方法。一般来说，它可以用来从“外部”对 jsdom 进行操作，而这些操作对于普通 DOM API 来说是不可能的。对于不需要任何功能的简单场景，我们推荐使用类似的编码模式
 
@@ -53,8 +53,9 @@ const dom = new JSDOM(``, {
 - `referrer` 仅仅影响 `document.referrer` 的值。默认没有引用（即为空字符串）。
 - `contentType` 影响 `document.contentType` 的值，是按照 HTML 解析文档还是 XML 来解析。它的值如果不是 [HTML MIME 类型](https://mimesniff.spec.whatwg.org/#html-mime-type) 或 [XML MIME 类型](https://mimesniff.spec.whatwg.org/#xml-mime-type) 值的话将会抛出异常。默认值为`"text/html"`。如果存在 `charset` 参数，它会影响[二进制数据处理](#编码嗅探)。
 - `includeNodeLocations` 保留由 HTML 解析器生成的位置信息，允许您使用 `nodeLocation()` 方法（如下所述）检索它。它还能确保在 `<script>` 元素内运行的代码的异常堆栈跟踪中报告的行号是正确的。默认值为 `false` 以提供最佳性能，并且不能与 XML 内容类型一起使用，因为我们的 XML 解析器不支持位置信息。
+- `storageQuota` 是 `localStorage` 和 `sessionStorage` 使用的单独存储区域的代码单元的最大大小。尝试存储大于此限制的数据将导致抛出 `DOMException`。默认情况下，受 HTML 规范的启发，每个源设置为 5,000,000 个代码单元。
 
-请注意，`url` 和 `referrer` 在使用之前已经被规范化了，例如：如果你传入 `"https:example.com"`，jsdom 会自动规范化解释为 `"https://example.com/"`。如果你传递了一个不可解析的 URL，该调用将抛出错误。（URL 根据[URL 标准](https://url.spec.whatwg.org/)进行分析和序列化。）
+请注意，`url` 和 `referrer` 在使用之前已经被规范化了，例如：如果你传入 `"https:example.com"`，jsdom 会自动规范化解释为 `"https://example.com/"`。如果你传递了一个不可解析的 URL，该调用将抛出错误。（URL 根据 [URL 标准](https://url.spec.whatwg.org/)进行分析和序列化。）
 
 ### 执行脚本
 
@@ -136,7 +137,7 @@ window.requestAnimationFrame(timestamp => {
 - 通过 `<script>` 加载脚本，但是前提是 `runScripts: "dangerously"` 设置了
 - 通过 `<img>` 加载图片，但是前提是 `canvas` npm 包已安装（详见下面的[支持 Canvas](#支持-canvas)）
 
-尝试加载资源时，请记住 `url` 选项的默认值是 `"about:blank"`，这意味着通过相对 URL 包含的任何资源都将无法加载。（针对 URL `about:blank` 解析 URL `/something` 的结果是一个错误。）因此，在这些情况下，您可能希望为 `url` 选项设置一个非默认值，或使用自动执行此操作的 [convenience API](#便捷的-api) 之一。
+尝试加载资源时，请记住 `url` 选项的默认值是 `"about:blank"`，这意味着通过相对 URL 包含的任何资源都将无法加载。（针对 URL `about:blank` 解析 URL `/something` 的结果是一个错误。）因此，在这些情况下，您可能希望为 `url` 选项设置一个非默认值，或使用自动执行此操作的[便捷的 API](#便捷的-api) 之一。
 
 #### 高级配置
 
@@ -192,7 +193,7 @@ class CustomResourceLoader extends jsdom.ResourceLoader {
 
 ### 虚拟控制台
 
-像网页浏览器一样，jsdom 也具有“控制台”的概念。通过在文档内执行的脚本以及来自 jsdom 本身实现的信息和记录会从页面直接发送过来。我们将用户可控制的控制台称为“虚拟控制台”，以便将其与 Node.js console API 和页面内部的 window.console API 区分开来。
+像网页浏览器一样，jsdom 也具有“控制台”的概念。通过在文档内执行的脚本以及来自 jsdom 本身实现的信息和记录会从页面直接发送过来。我们将用户可控制的控制台称为“虚拟控制台”，以便将其与 Node.js `console` API 和页面内部的 `window.console` API 区分开来。
 
 默认情况下，`JSDOM` 构造函数将返回一个具有虚拟控制台的实例，该虚拟控制台将其所有输出转发到 Node.js 控制台。为了创建自己的虚拟控制台并将其传递给 jsdom，可以通过执行下面代码来覆盖此默认值
 
@@ -211,7 +212,7 @@ virtualConsole.on("dir", () => { ... });
 // ... etc. See https://console.spec.whatwg.org/#logging
 ```
 
-（请注意，最好在调用 `new JSDOM()`之前设置这些事件侦听器，因为在解析期间可能会发生错误或控制台调用脚本错误。）
+（请注意，最好在调用 `new JSDOM()` 之前设置这些事件侦听器，因为在解析期间可能会发生错误或控制台调用脚本错误。）
 
 如果你只是想将虚拟控制台输出重定向到另一个控制台，比如默认的 Node.js，你可以这样做
 
@@ -235,7 +236,7 @@ virtualConsole.sendTo(c, { omitJSDOMErrors: true });
 
 像网页浏览器一样，jsdom 也具有 cookie 容器的概念，存储 HTTP cookie。在文档的同一个域上一个 URL，并且没有标记为 HTTP-only 的 cookies，可以通过`document.cookie` API 来访问。此外，cookie 容器中的所有 cookie 都会影响子资源的加载。
 
-默认情况下，JSDOM 构造函数将返回一个带有空 cookie 的实例。要创建自己的 cookie 容器并将其传递给 jsdom，可以通过以下代码来覆盖默认值
+默认情况下，`JSDOM` 构造函数将返回一个带有空 cookie 的实例。要创建自己的 cookie 容器并将其传递给 jsdom，可以通过以下代码来覆盖默认值
 
 ```js
 const cookieJar = new jsdom.CookieJar(store, options);
@@ -267,9 +268,9 @@ const dom = new JSDOM(`<p>Hello</p>`, {
 
 ### Properties
 
-`window` 属性: `window` 对象的 key 从 `Window` 对象检索而来
+`window` 属性: `window` 对象的 key 从 `Window` 对象检索而来。
 
-`virtualConsole` 和 `cookieJar`：可以传入或者使用默认值
+`virtualConsole` 和 `cookieJar`：可以传入或者使用默认值。
 
 ### 通过 `serialize()` 序列化 document
 
@@ -366,7 +367,7 @@ dom.window.top === myFakeTopForTesting;
 dom.window.location.href === "https://example.com/";
 ```
 
-**请注意**，更改 jsdom 的 URL 将影响所有返回当前 document URL 的 API，例如`window.location`，` document.URL``和document.documentURI `，以及文档中相对 URL 的解析以及同源检查和提取子资源时使用的引用。但是，它不会执行导航到该 URL 的内容;DOM 的内容将保持不变，并且不会创建`Window`，`Document`等新的实例。
+请注意，更改 jsdom 的 URL 将影响所有返回当前 document URL 的 API，例如`window.location`，` document.URL``和document.documentURI `，以及文档中相对 URL 的解析以及同源检查和提取子资源时使用的引用。但是，它不会执行导航到该 URL 的内容;DOM 的内容将保持不变，并且不会创建`Window`，`Document`等新的实例。
 
 ## 便捷的 API
 
@@ -382,7 +383,7 @@ JSDOM.fromURL("https://example.com/", options).then(dom => {
 
 如果 URL 有效且请求成功，则 `onFullfilled` 回调执行并返回 `JSDOM` 实例。任何 URL 重定向都将遵循其最终目的地。
 
-`fromURL()` 提供的选项与提供给 JSDOM 构造函数的选项类似，但具有以下额外的限制和后果：
+`fromURL()` 提供的选项与提供给 `JSDOM` 构造函数的选项类似，但具有以下额外的限制和后果：
 
 - `url` 和 `contentType` 参数不能被提供。
 - `referrer` 选项用作初始请求的 HTTP `Referer` 请求头。
@@ -392,7 +393,7 @@ JSDOM.fromURL("https://example.com/", options).then(dom => {
 
 ### `fromFile()`
 
-与 `fromURL()` 类似，jsdom 还提供了一个 `fromFile()` 工厂方法，用于从文件名构建 jsdom。
+与 `fromURL()` 类似，jsdom 还提供了一个 `fromFile()` 工厂方法，用于从文件名构建 jsdom：
 
 ```js
 JSDOM.fromFile("stuff.html", options).then(dom => {
@@ -409,7 +410,7 @@ JSDOM.fromFile("stuff.html", options).then(dom => {
 
 ### `fragment()`
 
-对于最简单的情况，你可能不需要一个完整的 JSDOM 实例及其所有相关的功能。您甚至可能不需要 `Window` 或 `Document`！相反，你只需要解析一些 HTML 片段，并获得一个你可以操作的 DOM 对象。为此，我们提供了 `fragment()`，它可以从给定的字符串中创建一个` DocumentFragment`：
+对于最简单的情况，你可能不需要一个完整的 `JSDOM` 实例及其所有相关的功能。您甚至可能不需要 `Window` 或 `Document`！相反，你只需要解析一些 HTML 片段，并获得一个你可以操作的 DOM 对象。为此，我们提供了 `fragment()`，它可以从给定的字符串中创建一个` DocumentFragment`：
 
 ```js
 const frag = JSDOM.fragment(`<p>Hello</p><p><strong>Hi!</strong>`);
@@ -442,13 +443,13 @@ jsdom 支持使用 [`canvas`](https://www.npmjs.com/package/canvas) 包来扩展
 
 如果提供的 `contentType` 选项包含 `charset` 参数，则该编码将覆盖嗅探的编码 - 除非存在 UTF-8 或 UTF-16 BOM，在这种情况下嗅探的编码优先。（同样就像浏览器。）
 
-这种编码嗅探也适用于 `JSDOM.fromFile()` 和 `JSDOM.fromURL()`。在后一种情况下，就像在浏览器中一样，任何与响应一起发送的 `Content-Type` 头信息优先级更高，与构造函数的 `contentType` 选项的方式相同。。
+这种编码嗅探也适用于 `JSDOM.fromFile()` 和 `JSDOM.fromURL()`。在后一种情况下，就像在浏览器中一样，任何与响应一起发送的 `Content-Type` 头信息优先级更高，与构造函数的 `contentType` 选项的方式相同。
 
 请注意，在许多情况下，提供字节这种方式可能比提供字符串更好。例如，如果您试图使用 Node.js 的 `buffer.toString('utf-8')` API，则 Node.js 将不会去除任何前导 BOM。如果您将此字符串提供给 jsdom，它会逐字解释，从而使 BOM 保持不变。但 jsdom 的二进制数据解码代码将剥离前导的 BOM，就像浏览器一样；在这种情况下，直接提供 `buffer` 将会得到想要的结果。
 
 ### 关闭 jsdom
 
-jsdom 中定义的定时器（通过 `window.setTimeout` 或 `window.setInterval` 设置）将在 window 上下文中执行代码。由于进程在不活跃的情况下无法执行未来的定时器代码，所以卓越的 jsdom 定时器将保持您的 Node.js 进程处于活动状态。同样，对象不活跃的情况下也没有办法在对象的上下文中执行代码，卓越的 jsdom 定时器将阻止垃圾回收调度它们的 window。
+jsdom 中定义的定时器（通过 `window.setTimeout()` 或 `window.setInterval()` 设置）将在 window 上下文中执行代码。由于进程在不活跃的情况下无法执行未来的定时器代码，所以卓越的 jsdom 定时器将保持您的 Node.js 进程处于活动状态。同样，对象不活跃的情况下也没有办法在对象的上下文中执行代码，卓越的 jsdom 定时器将阻止垃圾回收调度它们的 window。
 
 如果你想确保关闭 jsdom 窗口，使用 `window.close()`，它将终止所有正在运行的定时器（并且还会删除 `window` 和 `document` 上的任何事件监听器）。
 
@@ -458,9 +459,9 @@ jsdom 中定义的定时器（通过 `window.setTimeout` 或 `window.setInterval
 
 jsdom 的主要目标对象仍然是 Node.js，因此我们使用仅存在于最新 Node.js 版本中的语言特性功能。因此，在旧版浏览器可能无法正常工作。（即使编译也不会有多大帮助：我们在整个 jsdom 代码库中广泛使用 `Proxy`。）
 
-值得注意的是，jsdom 在 `web worker` 中能很好的运行。项目的开发者 [@lawnsea](https://github.com/lawnsea/) 使这一功能点成为可能，他发表了一篇关于他的[项目的论文](https://pdfs.semanticscholar.org/47f0/6bb6607a975500a30e9e52d7c9fbc0034e27.pdf)，该论文就使用了这种能力。
+值得注意的是，jsdom 在 Web Worker 中能很好的运行。项目的开发者 [@lawnsea](https://github.com/lawnsea/) 使这一功能点成为可能，他发表了一篇关于他的[项目的论文](https://pdfs.semanticscholar.org/47f0/6bb6607a975500a30e9e52d7c9fbc0034e27.pdf)，该论文就使用了这种能力。
 
-在 Web 浏览器中运行 jsdom 时，并非所有的工作都完美。有些情况下，这是由于基础的条件限制（比如没有文件系统访问），但有些情况下也是因为我们没有花足够的时间去进行适当的小调整。欢迎大家来提 BUG。
+在 Web 浏览器中运行 jsdom 时，并非所有的工作都完美。有些情况下，这是由于基础的条件限制（比如没有文件系统访问），但有些情况下也是因为我们没有花足够的时间去进行适当的小调整。欢迎大家来提 bug。
 
 ### 使用 Chrome 开发者工具调试 DOM
 
@@ -507,7 +508,7 @@ requirejs(["entry-module"], () => {
 - **导航**：在点击链接或赋值 `location.href` 或类似操作时可以更改全局对象和所有其他的对象。
 - **布局**：计算 CSS 元素的视觉布局的能力，这会影响诸如 `getBoundingClientRects()` 或者诸如 `offsetTop` 之类的属性。
 
-目前，jsdom 对某些功能的某些方面具有虚拟行为，例如操作导航时向虚拟控制台发送“未实现的”`"jsdomError"`，或者为许多与布局相关的属性返回 0。您通常可以在代码中解决这些限制，例如通过在爬网过程中为每个页面创建新的 `JSDOM` 实例，或使用 `Object.defineProperty` 更改各种与布局相关的 `getter` 和方法的返回值
+目前，jsdom 对某些功能的某些方面具有虚拟行为，例如操作导航时向虚拟控制台发送“未实现的”`"jsdomError"`，或者为许多与布局相关的属性返回 0。您通常可以在代码中解决这些限制，例如通过在爬网过程中为每个页面创建新的 `JSDOM` 实例，或使用 `Object.defineProperty()` 更改各种与布局相关的 getter 和方法的返回值
 
 请注意，相同领域中的其他工具（如 PhantomJS）确实支持这些功能。在 wiki 上，我们有关于 [jsdom 与 PhantomJS 比较](https://github.com/jsdom/jsdom/wiki/jsdom-vs.-PhantomJS)的更完整的介绍。
 
