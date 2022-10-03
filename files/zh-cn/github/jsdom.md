@@ -31,7 +31,7 @@ const { window } = new JSDOM(`...`);
 const { document } = (new JSDOM(`...`)).window;
 ```
 
-下面是关于 JSDOM 类所能做的一切的完整文档，在“`JSDOM` 对象 API”部分。
+下面是关于 `JSDOM` 类所能做的一切的完整文档，在“`JSDOM` 对象 API”部分。
 
 ## 定制 jsdom
 
@@ -372,60 +372,58 @@ dom.window.location.href === "https://example.com/";
 
 ### `fromURL()`
 
-除了 JSDOM 构造函数本身之外，jsdom 还提供了一个返回 `Promise` 的工厂方法，用于通过 URL 构建一个 jsdom 实例
+除了 `JSDOM` 构造函数本身之外，jsdom 还提供了一个返回 Promise 的工厂方法，用于通过 URL 构建一个 jsdom 实例：
 
 ```js
-JSDOM.fromURL("https://example.com/", options).then((dom) => {
+JSDOM.fromURL("https://example.com/", options).then(dom => {
   console.log(dom.serialize());
 });
 ```
 
-如果 URL 有效且请求成功，则`onFullfilled`回调执行并返回 JSDOM 实例。任何 URL 重定向都将遵循其最终目的地。
+如果 URL 有效且请求成功，则 `onFullfilled` 回调执行并返回 `JSDOM` 实例。任何 URL 重定向都将遵循其最终目的地。
 
-`fromURL()`提供的参数选项与提供给 JSDOM 构造函数的选项类似，但具有以下额外的限制和后果：
+`fromURL()` 提供的选项与提供给 JSDOM 构造函数的选项类似，但具有以下额外的限制和后果：
 
-- `url` 和 `contentType` 参数不能被提供
-- `referrer` 选项用作初始请求的 HTTP Referer 请求头
-- `userAgent` 选项用作任何请求的 HTTP User-Agent 请求头
-- 生成的 jsdom 的`url` 和 `contentType`和`referrer`是 由 http response 来决定
-- 任何通过 HTTP Set-Cookie 响应头设置的 cookie 都存储在 jsdom 的 cookie jar 中。同样，已提供的 cookie jar 中的任何 cookie 都会作为 HTTP Cookie 请求标头发送。
-
-初始的请求并不能无限定制到像[request](https://www.npmjs.com/package/request) npm 包一样的程度;`fromURL()`旨在为大多数情况提供便利的 API。如果您需要更好地控制初始请求，您应该自己执行它，然后手动使用 JSDOM 构造函数。
+- `url` 和 `contentType` 参数不能被提供。
+- `referrer` 选项用作初始请求的 HTTP `Referer` 请求头。
+- `resources` 选项也会影响初始请求；这很有用，例如，如果您想配置代理（见上文）。
+- 生成的 jsdom 的 URL、内容类型和来源是由响应来决定。
+- 任何通过 HTTP `Set-Cookie` 响应头设置的 cookie 都存储在 jsdom 的 cookie 容器中。同样，已提供的 cookie 容器中的任何 cookie 都会作为 HTTP `Cookie` 请求头发送。
 
 ### `fromFile()`
 
-与`fromURL()`类似，jsdom 还提供了一个`fromFile()`工厂方法，用于从文件名构建 jsdom
+与 `fromURL()` 类似，jsdom 还提供了一个 `fromFile()` 工厂方法，用于从文件名构建 jsdom。
 
 ```js
-JSDOM.fromFile("stuff.html", options).then((dom) => {
+JSDOM.fromFile("stuff.html", options).then(dom => {
   console.log(dom.serialize());
 });
 ```
 
-如果可以打开给定的文件，则`onFullfilled`回调执行并返回 JSDOM 实例。和 Node.js API 一样，文件名是相对于当前工作目录的。
+如果可以打开给定的文件，则 `onFullfilled` 回调执行并返回 `JSDOM` 实例。和 Node.js API 一样，文件名是相对于当前工作目录的。
 
-`fromFile()`提供的选项与提供给 JSDOM 构造函数的选项相似，但具有以下额外的默认值：
+`fromFile()` 提供的选项与提供给 `JSDOM` 构造函数的选项相似，但具有以下额外的默认值：
 
-- `url`选项将默认为给定文件名相对应的文件 URL，而不是`"about：blank"`
-- 假如给定的文件名是以`.xhtml`或者`.xml`为后缀的话，`contentType`选项默认为`"application/xhtml+xml"`;反之为`"text/html"`。
+- `url` 选项将默认为给定文件名相对应的文件 URL，而不是 `"about：blank"`。
+- 假如给定的文件名是以 `.xht`、`.xhtml` 或者 `.xml` 为后缀的话，`contentType` 选项默认为 `"application/xhtml+xml"`；反之为 `"text/html"`。
 
 ### `fragment()`
 
-对于最简单的情况，你可能不需要一个完整的 JSDOM 实例及其所有相关的功能。您甚至可能不需要`Window`或`Document`！相反，你只需要解析一些 HTML 片段，并获得一个你可以操作的`DOM`对象。为此，我们提供了`fragment()`，它可以从给定的字符串中创建一个`DocumentFragment`：
+对于最简单的情况，你可能不需要一个完整的 JSDOM 实例及其所有相关的功能。您甚至可能不需要 `Window` 或 `Document`！相反，你只需要解析一些 HTML 片段，并获得一个你可以操作的 DOM 对象。为此，我们提供了 `fragment()`，它可以从给定的字符串中创建一个` DocumentFragment`：
 
 ```js
 const frag = JSDOM.fragment(`<p>Hello</p><p><strong>Hi!</strong>`);
 
 frag.childNodes.length === 2;
-frag.querySelector("strong").textContent = "Why hello there!";
+frag.querySelector("strong").textContent === "Hi!";
 // etc.
 ```
 
-`frag`是`DocumentFragment`的实例对象，其内容是通过提供的字符串解析创建的。解析是通过使用`<template>`元素完成的，因此您可以在其中包含任何元素（包括具有奇怪解析规则的元素，如`<td>`）。
+`frag` 是 [`DocumentFragment`](https://developer.mozilla.org/zh-CN/docs/Web/API/DocumentFragment) 的实例对象，其内容是通过提供的字符串解析创建的。解析是通过使用 `<template>` 元素完成的，因此您可以在其中包含任何元素（包括具有奇怪解析规则的元素，如 `<td>`）。还需要注意的是，生成的 `DocumentFragment` 不会有[关联的浏览上下文](https://html.spec.whatwg.org/multipage/#concept-document-bc)：即元素的 `ownerDocument` 将有一个空的 `defaultView` 属性，资源不会加载，等等。
 
-`fragment()`工厂函数的所有调用结果的`DocumentFragments`实例都会共享相同的`Document`和`Window`。这允许多次调用`fragment()`而没有额外的开销。但这也意味着对`fragment()`的调用不能用任何选项自定义。
+`fragment()` 工厂函数的所有调用结果的 `DocumentFragments` 实例都会共享相同的 `Document`。这允许多次调用 `fragment()` 而没有额外的开销。但这也意味着对 `fragment()` 的调用不能用任何选项自定义。
 
-**请注意**，对`DocumentFragments`的序列化并不像使用 JSDOM 对象那样容易。如果你需要序列化你的`DOM`，你应该直接使用 JSDOM 构造函数。但对于包含单个元素的片段的特殊情况，通过常规方法就很容易做到。
+请注意，对 `DocumentFragments` 的序列化并不像使用 `JSDOM` 对象那样容易。如果你需要序列化你的 DOM ，你应该直接使用 `JSDOM` 构造函数。但对于包含单个元素的片段的特殊情况，通过常规方法就很容易做到。
 
 ```js
 const frag = JSDOM.fragment(`<p>Hello</p>`);
@@ -436,35 +434,37 @@ console.log(frag.firstChild.outerHTML); // logs "<p>Hello</p>"
 
 ### 支持 Canvas
 
-jsdom 支持使用[canvas](https://www.npmjs.com/package/canvas)或[canvas-prebuilt](https://www.npmjs.com/package/canvas-prebuilt)包来扩展任何使用 canvas API 的`<canvas>`元素。为了做到这一点，您需要将`canvas`作为依赖项加入到您的项目中，和 `jsdom`包并列。如果 jsdom 可以找到`canvas`包，它将使用它，但是如果它不存在，那么`<canvas>`元素的行为就像`<div>`一样。
+jsdom 支持使用 [`canvas`](https://www.npmjs.com/package/canvas) 包来扩展任何使用 canvas API 的 `<canvas>` 元素。为了做到这一点，您需要将 `canvas` 作为依赖项加入到您的项目中，和 `jsdom` 包并列。如果 jsdom 可以找到 `canvas` 包，它将使用它，但是如果它不存在，那么 `<canvas>` 元素的行为就像 `<div>` 一样。从 jsdom v13 开始，需要 `canvas` 的 2.x 版本；不再支持 1.x 版。
 
 ### 编码嗅探
 
-除了提供一个字符串外，JSDOM 构造函数还支持 Node.js [`Buffer`](https://nodejs.org/docs/latest/api/buffer.html)或标准 JavaScript 二进制数据类型（如 ArrayBuffer，Uint8Array，DataView 等）的形式提供二进制数据。当完成后，jsdom 将从提供的字节进行[`嗅探编码`](https://html.spec.whatwg.org/multipage/syntax.html#encoding-sniffing-algorithm)，就像浏览器扫描`<meta charset>`标签一样。
+除了提供一个字符串外，`JSDOM` 构造函数还支持 Node.js [`Buffer`](https://nodejs.org/docs/latest/api/buffer.html)或标准 JavaScript 二进制数据类型（如 `ArrayBuffer`，`Uint8Array`，`DataView` 等）的形式提供二进制数据。当完成后，jsdom 将就像浏览器一样从提供的字节进行[嗅探编码](https://html.spec.whatwg.org/multipage/syntax.html#encoding-sniffing-algorithm)，扫描 `<meta charset>` 标签。
 
-这种编码嗅探也适用于`JSDOM.fromFile()`和`JSDOM.fromURL()`。在后一种情况下，就像在浏览器中一样，任何与 response 响应一起发送的`Content-Type`头信息优先级更高。
+如果提供的 `contentType` 选项包含 `charset` 参数，则该编码将覆盖嗅探的编码 - 除非存在 UTF-8 或 UTF-16 BOM，在这种情况下嗅探的编码优先。（同样就像浏览器。）
 
-**请注意**，在许多情况下，提供字节这种方式可能比提供字符串更好。例如，如果您试图使用 Node.js 的`buffer.toString('utf-8')`API，则 Node.js 将不会去除任何前导 BOM。如果您将此字符串提供给 jsdom，它会逐字解释，从而使 BOM 保持不变。但 jsdom 的二进制数据解码代码将剥离前导的 BOM，就像浏览器一样;在这种情况下，直接提供`buffer`将会得到想要的结果。
+这种编码嗅探也适用于 `JSDOM.fromFile()` 和 `JSDOM.fromURL()`。在后一种情况下，就像在浏览器中一样，任何与响应一起发送的 `Content-Type` 头信息优先级更高，与构造函数的 `contentType` 选项的方式相同。。
 
-### 关闭一个 jsdom
+请注意，在许多情况下，提供字节这种方式可能比提供字符串更好。例如，如果您试图使用 Node.js 的 `buffer.toString('utf-8')` API，则 Node.js 将不会去除任何前导 BOM。如果您将此字符串提供给 jsdom，它会逐字解释，从而使 BOM 保持不变。但 jsdom 的二进制数据解码代码将剥离前导的 BOM，就像浏览器一样；在这种情况下，直接提供 `buffer` 将会得到想要的结果。
 
-jsdom 中定义的定时器（通过`window.setTimeout`或`window.setInterval`设置）将在 window 上下文中执行代码。由于进程在不活跃的情况下无法执行未来的定时器代码，所以卓越的 jsdom 定时器将保持您的 Node.js 进程处于活动状态。同样，对象不活跃的情况下也没有办法在对象的上下文中执行代码，卓越的 jsdom 定时器将阻止垃圾回收调度它们的 window。
+### 关闭 jsdom
 
-如果你想确保关闭 jsdom 窗口，使用`window.close()`，它将终止所有正在运行的定时器（并且还会删除 `window`和`document`上的任何事件监听器）。
+jsdom 中定义的定时器（通过 `window.setTimeout` 或 `window.setInterval` 设置）将在 window 上下文中执行代码。由于进程在不活跃的情况下无法执行未来的定时器代码，所以卓越的 jsdom 定时器将保持您的 Node.js 进程处于活动状态。同样，对象不活跃的情况下也没有办法在对象的上下文中执行代码，卓越的 jsdom 定时器将阻止垃圾回收调度它们的 window。
+
+如果你想确保关闭 jsdom 窗口，使用 `window.close()`，它将终止所有正在运行的定时器（并且还会删除 `window` 和 `document` 上的任何事件监听器）。
 
 ### 在 Web 浏览器中运行 jsdom
 
-使用[browserify](http://browserify.org/)模块，jsdom 某些方面也支持在 Web 浏览器中运行。也就是说，在 Web 浏览器中，您可以使用被`browserify`模块编译过的 jsdom 去创建完全独立的普通 JavaScript 对象集，其外观和行为与浏览器的现有 DOM 对象非常相似，但完全独立于它们，也就是"虚拟 DOM"！
+使用 [browserify](http://browserify.org/) 模块，jsdom 某些方面也支持在 Web 浏览器中运行。也就是说，在 Web 浏览器中，您可以使用被 `browserify` 模块编译过的 jsdom 去创建完全独立的普通 JavaScript 对象集，其外观和行为与浏览器的现有 DOM 对象非常相似，但完全独立于它们，也就是“虚拟 DOM”！
 
-jsdom 的主要目标对象仍然是 Node.js，因此我们使用仅存在于最新 Node.js 版本（即 Node.js v6 +）中的语言特性功能。因此，在旧版浏览器可能无法正常工作。（即使编译也不会有多大帮助：我们计划在 jsdom v10.x 的整个过程中广泛使用`Proxy`。）
+jsdom 的主要目标对象仍然是 Node.js，因此我们使用仅存在于最新 Node.js 版本中的语言特性功能。因此，在旧版浏览器可能无法正常工作。（即使编译也不会有多大帮助：我们在整个 jsdom 代码库中广泛使用 `Proxy`。）
 
-值得注意的是，jsdom 在`web worker`中能很好的运行。项目的开发者[@lawnsea](https://github.com/lawnsea/)使这一功能点成为可能，他发表了一篇关于他的[项目的论文](https://pdfs.semanticscholar.org/47f0/6bb6607a975500a30e9e52d7c9fbc0034e27.pdf)，该论文就使用了这种能力。
+值得注意的是，jsdom 在 `web worker` 中能很好的运行。项目的开发者 [@lawnsea](https://github.com/lawnsea/) 使这一功能点成为可能，他发表了一篇关于他的[项目的论文](https://pdfs.semanticscholar.org/47f0/6bb6607a975500a30e9e52d7c9fbc0034e27.pdf)，该论文就使用了这种能力。
 
 在 Web 浏览器中运行 jsdom 时，并非所有的工作都完美。有些情况下，这是由于基础的条件限制（比如没有文件系统访问），但有些情况下也是因为我们没有花足够的时间去进行适当的小调整。欢迎大家来提 BUG。
 
-### 使用 Chrome Devtools 调试 DOM
+### 使用 Chrome 开发者工具调试 DOM
 
-从 Node.js v6 开始，您可以使用 Chrome Devtools 来调试程序。请参阅[官方文档](https://nodejs.org/en/docs/guides/debugging-getting-started/)了解如何使用。
+可以使用 Chrome 开发者工具来调试 Node.js 程序。请参阅[官方文档](https://nodejs.org/en/docs/inspector/)了解如何使用。
 
 默认情况下，jsdom 元素在控制台中被格式化为普通的旧 JS 对象。为了便于调试，可以使用[jsdom-devtools-formatter](https://github.com/jsdom/jsdom-devtools-formatter)，它可以让你像真正的 DOM 元素一样调试它们。
 
@@ -472,7 +472,7 @@ jsdom 的主要目标对象仍然是 Node.js，因此我们使用仅存在于最
 
 ### 异步脚本加载
 
-使用 jsdom 时，开发者在加载异步脚本时经常遇到麻烦。许多页面异步加载脚本，但无法分辨脚本什么时候完成，因此无法知道何时是运行代码并检查生成的 DOM 结构的好时机。这是一个基本的限制;我们无法预测网页上的哪些脚本会做什么，因此无法告诉您脚本何时加载完毕。
+使用 jsdom 时，开发者在加载异步脚本时经常遇到麻烦。许多页面异步加载脚本，但无法分辨脚本什么时候完成，因此无法知道何时是运行代码并检查生成的 DOM 结构的好时机。这是一个基本的限制；我们无法预测网页上的哪些脚本会做什么，因此无法告诉您脚本何时加载完毕。
 
 这个问题可以通过几种方法来解决。如果您能控制页面逻辑，最好的方法是使用脚本加载器提供的机制来检测何时加载完成。例如，如果您使用像 RequireJS 这样的模块加载器，代码可能如下所示：
 
@@ -493,31 +493,10 @@ requirejs(["entry-module"], () => {
 </script>
 ```
 
-如果您不能控制该页面，则可以尝试其他解决方法，例如轮询检查特定元素是否存在。有关更多详细信息，请查看[#640](https://github.com/tmpvar/jsdom/issues/640)中的讨论，尤其是[@ matthewkastor](https://github.com/matthewkastor)的[深刻见解](https://github.com/tmpvar/jsdom/issues/640#issuecomment-22216965)。
+如果您不能控制该页面，则可以尝试其他解决方法，例如轮询检查特定元素是否存在。
 
-### 共享的构造函数和原型
+有关更多详细信息，请查看[#640](https://github.com/tmpvar/jsdom/issues/640)中的讨论，尤其是 [@matthewkastor](https://github.com/matthewkastor) 的[深刻见解](https://github.com/tmpvar/jsdom/issues/640#issuecomment-22216965)。
 
-目前，对于大多数 Web 平台 API，jsdom 在多个看似独立的 jsdoms 之间共享相同的类定义。这将意味着，可能会出现以下情况
-
-```js
-const dom1 = new JSDOM();
-const dom2 = new JSDOM();
-
-dom1.window.Element.prototype.expando = "blah";
-console.log(dom2.window.document.createElement("frameset").expando); // logs "blah"
-```
-
-这主要是出于性能和内存的原因：如果在 Web 平台上每次创建 jsdom 时,创建所有类的单独副本，开销将会相当昂贵。
-
-尽管如此，我们仍然有兴趣在有一天提供一个选项配置来创建一个“独立”的 jsdom，但要牺牲一些性能。
-
-### 新 API 中缺失的功能
-
-与 v9.x 之前的旧版 jsdom API 相比，新 API 显然缺少对资源加载的精细控制。先前版本的 jsdom 允许您设置 request 时使用的选项（既可以用于初始请求，也可以用于旧版本的`JSDOM.fromURL()`和子资源请求）。他们还允许您控制请求哪些子资源并将其应用于主文档，以便您可以下载样式表，但不下载脚本文件。最后，他们提供了一个可定制的资源加载器，可以拦截任何传出的请求并用完全合成的 response 响应来结束。
-
-以上这些功能尚未在新的 jsdom API 中实现，尽管我们也希望尽快将它们添加回来，但不幸的是，这需要相当大的幕后工作去实施。
-
-同时，请随时使用旧的 jsdom API 来访问此功能。它一直处于支持和维护中，但它不会获得新功能。旧的文档位于[`lib/old-api.md`](https://github.com/jsdom/jsdom/blob/master/lib/old-api.md)中。
 
 ### 未实现的 Web 平台部分
 
@@ -525,27 +504,25 @@ console.log(dom2.window.document.createElement("frameset").expando); // logs "bl
 
 除了我们尚未拥有的功能之外，还有两个主要功能目前超出了 jsdom 的范围。这些是：
 
-- Navigation：在点击链接或赋值 location.href 或类似操作时可以更改全局对象和所有其他的对象。
-- Layout：计算 CSS 元素的视觉布局的能力，这会影响诸如`getBoundingClientRects()`或者诸如`offsetTop`之类的属性
+- **导航**：在点击链接或赋值 `location.href` 或类似操作时可以更改全局对象和所有其他的对象。
+- **布局**：计算 CSS 元素的视觉布局的能力，这会影响诸如 `getBoundingClientRects()` 或者诸如 `offsetTop` 之类的属性。
 
-目前，jsdom 对某些功能的某些方面具有虚拟行为，例如操作`navigation` 时向虚拟控制台发送“未实现的”`"jsdomError"`，或者为许多与布局相关的属性返回 0。您通常可以在代码中解决这些限制，例如通过在爬网过程中为每个页面创建新的 JSDOM 实例，或使用`Object.defineProperty`更改各种与布局相关的`getter`和方法的返回值
+目前，jsdom 对某些功能的某些方面具有虚拟行为，例如操作导航时向虚拟控制台发送“未实现的”`"jsdomError"`，或者为许多与布局相关的属性返回 0。您通常可以在代码中解决这些限制，例如通过在爬网过程中为每个页面创建新的 `JSDOM` 实例，或使用 `Object.defineProperty` 更改各种与布局相关的 `getter` 和方法的返回值
 
-**请注意**，相同领域中的其他工具（如 PhantomJS）确实支持这些功能。在 wiki 上，我们有关于[jsdom vs. PhantomJS](https://github.com/tmpvar/jsdom/wiki/jsdom-vs.-PhantomJS)的更完整的比较介绍。
+请注意，相同领域中的其他工具（如 PhantomJS）确实支持这些功能。在 wiki 上，我们有关于 [jsdom 与 PhantomJS 比较](https://github.com/jsdom/jsdom/wiki/jsdom-vs.-PhantomJS)的更完整的介绍。
+
+## 支持jsdom
+
+jsdom 是一个社区驱动的项目，由[志愿者](https://github.com/orgs/jsdom/people)团队维护。您可以通过以下方式支持 jsdom：
+
+- 在 Tidelift 订阅中[获得对 jsdom 的专业支持](https://tidelift.com/subscription/pkg/npm-jsdom?utm_source=npm-jsdom&utm_medium=referral&utm_campaign=readme)。Tidelift 帮助我们实现开源的可持续发展，同时为团队提供维护、许可和安全方面的保证。
+- 直接对项目[做贡献](https://github.com/jsdom/jsdom/blob/master/Contributing.md)。
 
 ## 获取帮助
 
 如果您需要 jsdom 的帮助，请随时使用以下任何方式：
 
-- [邮件组](https://groups.google.com/forum/#!forum/jsdom)(问题最好以"how do i"的形式)
-- [报 iusse](https://github.com/tmpvar/jsdom/issues)(最好用 BUG 报告)
-- IRC 频道：#jsdom on freenode
+- [邮件组](https://groups.google.com/group/jsdom)（最好以 “how do I” 的形式提问）
+- [提 issue](https://github.com/jsdom/jsdom/issues)（最好用来提 bug）
+- Matrix 房间：[#jsdom:matrix.org](https://matrix.to/#/#jsdom:matrix.org)
 
-## 特别声明
-
-以上文档翻译自开源项目 jsdom，如有翻译错误，欢迎指正。
-
-[jsdom 原文链接](https://github.com/jsdom/jsdom/blob/master/README.md)
-
-[jsdom 项目链接](https://github.com/jsdom/jsdom)
-
-[原文博客地址](https://github.com/alibaba-paimai-frontend/blog/issues/1)
