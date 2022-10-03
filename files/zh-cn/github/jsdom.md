@@ -342,8 +342,6 @@ console.assert(dom.window.ran === 3);
 
 请注意，如果在没有设置 `runScripts` 的情况下创建了 `JSDOM` 实例，或者如果您 [在 Web 浏览器中使用 jsdom](#在-web-浏览器中运行-jsdom)，此方法将抛出异常。
 
-
-
 ### 通过`reconfigure(settings)`重新配置 jsdom
 
 `window.top`属性在规范中被标记为[Unforgeable][中文：伪造的]，这意味着它是一个不可配置的私有属性，因此在 jsdom 内运行的普通代码是不能覆盖或遮挡它的，即使使用`Object.defineProperty`。
@@ -498,7 +496,6 @@ requirejs(["entry-module"], () => {
 
 有关更多详细信息，请查看[#640](https://github.com/tmpvar/jsdom/issues/640)中的讨论，尤其是 [@matthewkastor](https://github.com/matthewkastor) 的[深刻见解](https://github.com/tmpvar/jsdom/issues/640#issuecomment-22216965)。
 
-
 ### 未实现的 Web 平台部分
 
 目前 jsdom 中有很多缺失的 API，尽管我们也想要在 jsdom 中添加新的功能并保持最新的 Web 规范。请随时为缺失的任何内容提交 issue，但我们是一个很小并且忙碌的团队，因此大家一起来提交 pull request 可能会更好。
@@ -526,4 +523,3 @@ jsdom 是一个社区驱动的项目，由[志愿者](https://github.com/orgs/js
 - [邮件组](https://groups.google.com/group/jsdom)（最好以 “how do I” 的形式提问）
 - [提 issue](https://github.com/jsdom/jsdom/issues)（最好用来提 bug）
 - Matrix 房间：[#jsdom:matrix.org](https://matrix.to/#/#jsdom:matrix.org)
-
