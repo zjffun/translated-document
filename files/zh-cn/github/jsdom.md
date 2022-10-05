@@ -342,13 +342,13 @@ console.assert(dom.window.ran === 3);
 
 请注意，如果在没有设置 `runScripts` 的情况下创建了 `JSDOM` 实例，或者如果您 [在 Web 浏览器中使用 jsdom](#在-web-浏览器中运行-jsdom)，此方法将抛出异常。
 
-### 通过`reconfigure(settings)`重新配置 jsdom
+### 通过 `reconfigure(settings)` 重新配置 jsdom
 
-`window.top`属性在规范中被标记为[Unforgeable][中文：伪造的]，这意味着它是一个不可配置的私有属性，因此在 jsdom 内运行的普通代码是不能覆盖或遮挡它的，即使使用`Object.defineProperty`。
+`window.top` 属性在规范中被标记为 `[Unforgeable]`，这意味着它是一个不可配置的私有属性，因此在 jsdom 内运行的普通代码是不能覆盖或隐藏它，即使使用 `Object.defineProperty`。
 
-同样，目前在 jsdom 中是不能够处理`navigation`相关信息的（比如设置`window.location.href ="https://example.com/"`）;这样做会导致虚拟控制台发出`"jsdomError"`，说明此功能未实现，并且没有任何变化,也将不会有新的`Window`或`Document`对象，并且现有`window.location`对象仍保持当前所有相同的属性值。
+同样，目前在 jsdom 中是不能够处理导航相关信息的（比如设置 `window.location.href = "https://example.com/"`）；这样做会导致在虚拟控制台报 `"jsdomError"` 错误，说明此功能未实现，并且没有任何变化：也将不会有新的 `Window` 或 `Document` 对象，并且现有 `window` 的 `location` 对象仍保持当前所有相同的属性值。
 
-但是，如果您从 jsdom 窗口之外进行演示，例如在一些创建 jsdoms 的测试框架中，可以使用特殊的`reconfigure()`方法覆盖其中的一个或两个：
+但是，如果您从 jsdom 窗口之外进行操作，例如在一些创建 jsdom 的测试框架中，可以使用特殊的 `reconfigure()` 方法覆盖其中的一个或两个：
 
 ```js
 const dom = new JSDOM();
@@ -365,7 +365,7 @@ dom.window.top === myFakeTopForTesting;
 dom.window.location.href === "https://example.com/";
 ```
 
-请注意，更改 jsdom 的 URL 将影响所有返回当前 document URL 的 API，例如`window.location`，` document.URL``和document.documentURI `，以及文档中相对 URL 的解析以及同源检查和提取子资源时使用的引用。但是，它不会执行导航到该 URL 的内容;DOM 的内容将保持不变，并且不会创建`Window`，`Document`等新的实例。
+请注意，更改 jsdom 的 URL 将影响所有返回当前 document URL 的 API，例如 `window.location`、`document.URL` 和 `document.documentURI `，以及文档中相对 URL 的解析以及同源检查和提取子资源时使用的来源。但是，它不会执行导航到该 URL 的内容；DOM 的内容将保持不变，并且不会创建 `Window`，`Document`等新的实例。
 
 ## 便捷的 API
 
