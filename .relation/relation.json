@@ -357,547 +357,564 @@
     ]
   },
   {
-    "id": "fe74ki8box",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "lgcz3x1huh",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
       1,
-      10
+      8
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
       1,
-      10
+      8
     ]
   },
   {
-    "id": "t9vunlc2ow",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "l80cvqkmdm",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      12,
-      36
+      10,
+      34
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      12,
-      32
+      10,
+      34
     ]
   },
   {
-    "id": "3ranzfuz0s",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "xihngcp6f6",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      38,
-      40
+      36,
+      38
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      34,
-      36
+      36,
+      38
     ]
   },
   {
-    "id": "r9i99d54kn",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "lt5gfna28o",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      42,
-      60
+      40,
+      58
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      38,
-      60
+      40,
+      58
     ]
   },
   {
-    "id": "vzyegwzsny",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "ct35i3z2g3",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      62,
+      60,
       107
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      63,
-      108
+      60,
+      107
     ]
   },
   {
-    "id": "vwblmqxt25",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "8tesa6kqng",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
       109,
       127
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      110,
-      126
+      109,
+      127
     ]
   },
   {
-    "id": "idi9x10wjb",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "3hmv9izq9p",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
       129,
-      138
+      129
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      128,
-      136
+      129,
+      129
     ]
   },
   {
-    "id": "7xb1ewjj3n",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "9u4ljtt9k2",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      140,
-      179
+      131,
+      140
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      138,
-      172
+      131,
+      140
     ]
   },
   {
-    "id": "t5y5wuqa3r",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "k2h0kokto2",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      181,
-      194
+      142,
+      192
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      174,
-      186
+      142,
+      192
     ]
   },
   {
-    "id": "ea6f60kvqq",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "1pxbxzyhot",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      196,
-      209
+      194,
+      233
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      188,
-      199
+      194,
+      233
     ]
   },
   {
-    "id": "ybnss7kddf",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "vqeu5yate6",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      211,
-      213
+      235,
+      248
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      201,
-      202
+      235,
+      248
     ]
   },
   {
-    "id": "em4dcsgkc4",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "61anbfi4oj",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      215,
-      219
+      250,
+      263
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      204,
-      206
+      250,
+      263
     ]
   },
   {
-    "id": "e7aeqpergw",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "3yob5qro9e",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      221,
-      232
+      265,
+      267
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      208,
-      216
+      265,
+      267
     ]
   },
   {
-    "id": "ajeqma5ol3",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "jjewutq79j",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      234,
-      258
+      269,
+      273
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      218,
-      239
+      269,
+      273
     ]
   },
   {
-    "id": "64qdkf89yr",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "siqwp3x00c",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      260,
-      283
+      275,
+      286
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      242,
-      265
-    ]
-  },
-  {
-    "id": "1ra3p1aue5",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
-    "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
-    "fromRange": [
-      285,
-      305
-    ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
-    "toRange": [
-      267,
+      275,
       286
     ]
   },
   {
-    "id": "vqh2t7mn3d",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "sihzi5nwx2",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      307,
-      307
+      288,
+      312
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      289,
-      289
+      288,
+      312
     ]
   },
   {
-    "id": "uayg0z40z3",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "ro7u9iu4ia",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      309,
-      329
+      314,
+      343
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      291,
-      309
+      314,
+      343
     ]
   },
   {
-    "id": "p4xpgv0bmi",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "ftakmeh5zd",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      331,
-      346
+      345,
+      365
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      311,
-      325
+      345,
+      368
     ]
   },
   {
-    "id": "752wkngegk",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "qqr46ae3gc",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      348,
-      369
-    ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
-    "toRange": [
-      328,
-      348
-    ]
-  },
-  {
-    "id": "4lm42d0sdh",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
-    "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
-    "fromRange": [
-      371,
-      371
-    ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
-    "toRange": [
-      350,
-      350
-    ]
-  },
-  {
-    "id": "5qc18pe68b",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
-    "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
-    "fromRange": [
-      373,
-      375
-    ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
-    "toRange": [
-      352,
-      353
-    ]
-  },
-  {
-    "id": "yavrugpwm3",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
-    "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
-    "fromRange": [
-      377,
-      383
-    ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
-    "toRange": [
-      355,
-      361
-    ]
-  },
-  {
-    "id": "a9u6d8d5w7",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
-    "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
-    "fromRange": [
-      385,
-      389
-    ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
-    "toRange": [
-      363,
+      367,
       367
-    ]
-  },
-  {
-    "id": "baa6wckxei",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
-    "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
-    "fromRange": [
-      391,
-      399
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
+      370,
+      370
+    ]
+  },
+  {
+    "id": "5ikebmdxvh",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "fromPath": "files/en-us/github/jsdom.md",
+    "fromBaseDir": "",
+    "fromRange": [
       369,
-      377
-    ]
-  },
-  {
-    "id": "thsb4o1qc2",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
-    "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
-    "fromRange": [
-      401,
-      405
+      387
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      379,
-      383
+      372,
+      390
     ]
   },
   {
-    "id": "nli4ddbv2b",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "nul4knxt1x",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      407,
+      389,
+      404
+    ],
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toPath": "files/zh-cn/github/jsdom.md",
+    "toBaseDir": "",
+    "toRange": [
+      392,
       407
-    ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
-    "toRange": [
-      385,
-      385
     ]
   },
   {
-    "id": "ae6a2ntrkf",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "87upkqi5ha",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
+      406,
+      427
+    ],
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toPath": "files/zh-cn/github/jsdom.md",
+    "toBaseDir": "",
+    "toRange": [
       409,
-      434
-    ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
-    "toRange": [
-      387,
-      409
+      430
     ]
   },
   {
-    "id": "sga2cah9rz",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "pqxikd68vx",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      436,
-      450
+      429,
+      429
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      411,
-      424
-    ]
-  },
-  {
-    "id": "r01n8niztz",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
-    "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
-    "fromRange": [
-      452,
-      458
-    ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
-    "toRange": [
-      426,
+      432,
       432
     ]
   },
   {
-    "id": "4mn9f2gvuk",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "5e7wiuzlsw",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      460,
-      471
+      431,
+      433
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
       434,
-      444
+      436
     ]
   },
   {
-    "id": "skyly6vwpq",
-    "fromRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "id": "ps2fg3rpsw",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
     "fromBaseDir": "",
     "fromRange": [
-      473,
-      479
+      435,
+      443
     ],
-    "toRev": "0b402d1f88fcadf701e3ddbdc5faa5473b6f3118",
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "toPath": "files/zh-cn/github/jsdom.md",
     "toBaseDir": "",
     "toRange": [
-      446,
-      451
+      438,
+      446
+    ]
+  },
+  {
+    "id": "2cvpusuuhl",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "fromPath": "files/en-us/github/jsdom.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      445,
+      449
+    ],
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toPath": "files/zh-cn/github/jsdom.md",
+    "toBaseDir": "",
+    "toRange": [
+      448,
+      452
+    ]
+  },
+  {
+    "id": "356ufthvsd",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "fromPath": "files/en-us/github/jsdom.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      451,
+      459
+    ],
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toPath": "files/zh-cn/github/jsdom.md",
+    "toBaseDir": "",
+    "toRange": [
+      454,
+      462
+    ]
+  },
+  {
+    "id": "gsc91byj7u",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "fromPath": "files/en-us/github/jsdom.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      461,
+      465
+    ],
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toPath": "files/zh-cn/github/jsdom.md",
+    "toBaseDir": "",
+    "toRange": [
+      464,
+      468
+    ]
+  },
+  {
+    "id": "1l54rpg9me",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "fromPath": "files/en-us/github/jsdom.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      467,
+      467
+    ],
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toPath": "files/zh-cn/github/jsdom.md",
+    "toBaseDir": "",
+    "toRange": [
+      470,
+      470
+    ]
+  },
+  {
+    "id": "yww1p5jfgh",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "fromPath": "files/en-us/github/jsdom.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      469,
+      494
+    ],
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toPath": "files/zh-cn/github/jsdom.md",
+    "toBaseDir": "",
+    "toRange": [
+      472,
+      497
+    ]
+  },
+  {
+    "id": "mu06v18ee9",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "fromPath": "files/en-us/github/jsdom.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      496,
+      507
+    ],
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toPath": "files/zh-cn/github/jsdom.md",
+    "toBaseDir": "",
+    "toRange": [
+      499,
+      510
+    ]
+  },
+  {
+    "id": "v6ze54og8o",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "fromPath": "files/en-us/github/jsdom.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      509,
+      514
+    ],
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toPath": "files/zh-cn/github/jsdom.md",
+    "toBaseDir": "",
+    "toRange": [
+      512,
+      517
+    ]
+  },
+  {
+    "id": "19wr1yjyvt",
+    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "fromPath": "files/en-us/github/jsdom.md",
+    "fromBaseDir": "",
+    "fromRange": [
+      516,
+      522
+    ],
+    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toPath": "files/zh-cn/github/jsdom.md",
+    "toBaseDir": "",
+    "toRange": [
+      519,
+      525
     ]
   }
 ]
