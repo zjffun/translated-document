@@ -9,27 +9,33 @@ jsdom 是一个纯粹由 JavaScript 实现的一系列 Web 标准，特别是 WH
 
 ## 基本用法
 
+<!-- prettier-ignore-start -->
 ```js
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 ```
+<!-- prettier-ignore-end -->
 
 为了使用 jsdom，主要用到 jsdom 主模块的一个命名导出的 `JSDOM` 构造函数。往构造器传递一个字符串，将会得到一个 `JSDOM` 构造实例对象，这个对象有很多实用的属性，特别是 `window` 对象：
 
+<!-- prettier-ignore-start -->
 ```js
 const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
 console.log(dom.window.document.querySelector("p").textContent); // "Hello world"
 ```
+<!-- prettier-ignore-end -->
 
 （请注意，jsdom 会像浏览器一样解析您传递的 HTML，包括隐含的 `<html>`，`<head>` 和 `<body>` 标记。）
 
 生成的对象是 `JSDOM` 类的一个实例，其中包括 `window` 对象在内的许多有用的属性和方法。一般来说，它可以用来从“外部”对 jsdom 进行操作，而这些操作对于普通 DOM API 来说是不可能的。对于不需要任何功能的简单场景，我们推荐使用类似的编码模式
 
+<!-- prettier-ignore-start -->
 ```js
 const { window } = new JSDOM(`...`);
 // or even
 const { document } = (new JSDOM(`...`)).window;
 ```
+<!-- prettier-ignore-end -->
 
 下面是关于 `JSDOM` 类所能做的一切的完整文档，在“`JSDOM` 对象 API”部分。
 
@@ -39,6 +45,7 @@ const { document } = (new JSDOM(`...`)).window;
 
 ### 简单选项
 
+<!-- prettier-ignore-start -->
 ```js
 const dom = new JSDOM(``, {
   url: "https://example.org/",
@@ -48,6 +55,7 @@ const dom = new JSDOM(``, {
   storageQuota: 10000000
 });
 ```
+<!-- prettier-ignore-end -->
 
 - `url` 设置的值可以通过 `window.location`，`document.URL` 和 `document.documentURI` 来返回，并会影响文档中相关 URL 的解析以及获取子资源时使用的同源限制和 referrer。默认值为`"about:blank"`。
 - `referrer` 仅仅影响 `document.referrer` 的值。默认没有引用（即为空字符串）。
@@ -63,6 +71,7 @@ jsdom 最强大的功能是它可以在 jsdom 中执行脚本。这些脚本可�
 
 但是，这在处理不可信内容时也非常危险。jsdom 沙箱并不是万无一失的，在 DOM 的 `<script>` 内部运行的代码如果足够深入，就可以访问 Node.js 环境，从而访问您的计算机。因此，默认情况下，执行嵌入在 HTML 中的脚本的功能是禁用的：
 
+<!-- prettier-ignore-start -->
 ```js
 const dom = new JSDOM(`<body>
   <script>document.body.appendChild(document.createElement("hr"));</script>
@@ -71,9 +80,11 @@ const dom = new JSDOM(`<body>
 // 脚本默认将不会执行：
 dom.window.document.body.children.length === 1;
 ```
+<!-- prettier-ignore-end -->
 
 要在页面内启用脚本，可以使用 `runScripts: "dangerously"` 选项：
 
+<!-- prettier-ignore-start -->
 ```js
 const dom = new JSDOM(`<body>
   <script>document.body.appendChild(document.createElement("hr"));</script>
@@ -82,6 +93,7 @@ const dom = new JSDOM(`<body>
 // 脚本将执行并修改 DOM：
 dom.window.document.body.children.length === 2;
 ```
+<!-- prettier-ignore-end -->
 
 我们再次强调只有在提供给 jsdom 的代码是你已知道是安全的才可使用它。如果您运行了任意用户提供的或 Internet 上的不可信的 Node.js 代码，可能会危及您的计算机。
 
@@ -91,12 +103,14 @@ dom.window.document.body.children.length === 2;
 
 如果您只是试图从“外部”执行脚本，而不是通过 `<script>` 元素和事件处理属性从“内部”运行，则可以使用 `runScripts: "outside-only"` 选项，这使得所有 JavaScript 规范提供的全局变量的新副本都可以安装在 `window` 上。 这包括诸如 `window.Array`、`window.Promise` 等等。值得注意的是，它还包括 `window.eval` 可以用来运行脚本，运行时将 jsdom 的 `window` 作为全局：
 
+<!-- prettier-ignore-start -->
 ```js
 const { window } = new JSDOM(``, { runScripts: "outside-only" });
 
 window.eval(`document.body.innerHTML = "<p>Hello, world!</p>";`);
 window.document.body.children.length === 1;
 ```
+<!-- prettier-ignore-end -->
 
 由于性能原因，默认情况下会关闭此功能，但可以安全启用。
 
@@ -116,6 +130,7 @@ jsdom 没有渲染可视内容的能力，并且默认情况下会像无头浏�
 - 更改 `document.visibilityState` 以返回 `"visible"` 而不是 `"prerender"`
 - 启用 `window.requestAnimationFrame()` 和 `window.cancelAnimationFrame()` 方法，否则不存在
 
+<!-- prettier-ignore-start -->
 ```js
 const window = (new JSDOM(``, { pretendToBeVisual: true })).window;
 
@@ -123,6 +138,7 @@ window.requestAnimationFrame(timestamp => {
   console.log(timestamp > 0);
 });
 ```
+<!-- prettier-ignore-end -->
 
 请注意，jsdom 仍然[不做任何布局或渲染](#未实现的-web-平台部分)，因此这实际上只是假装为可视化，而不是实现真正的可视化 Web 浏览器将实现的部分。
 
@@ -145,6 +161,7 @@ _这个资源加载器系统是 jsdom v12.0.0 的新系统，我们希望您能�
 
 要更全面地自定义 jsdom 的资源加载行为，可以将 `ResourceLoader` 类的实例作为 `resources` 选项值传递：
 
+<!-- prettier-ignore-start -->
 ```js
 const resourceLoader = new jsdom.ResourceLoader({
   proxy: "http://127.0.0.1:9001",
@@ -153,6 +170,7 @@ const resourceLoader = new jsdom.ResourceLoader({
 });
 const dom = new JSDOM(``, { resources: resourceLoader });
 ```
+<!-- prettier-ignore-end -->
 
 `ResourceLoader` 构造函数的三个选项是：
 
@@ -162,6 +180,7 @@ const dom = new JSDOM(``, { resources: resourceLoader });
 
 您可以通过继承 `ResourceLoader` 并覆盖 `fetch()` 方法来进一步自定义资源获取。 例如，指定资源返回的内容：
 
+<!-- prettier-ignore-start -->
 ```js
 class CustomResourceLoader extends jsdom.ResourceLoader {
   fetch(url, options) {
@@ -174,11 +193,13 @@ class CustomResourceLoader extends jsdom.ResourceLoader {
   }
 }
 ```
+<!-- prettier-ignore-end -->
 
-jsdom 在遇到之前说到的“可用”资源时会调用自定义资源加载器的 `fetch()` 方法。该方法接受一个 URL 字符串，以及一些在调用 `super.fetch()` 时应透传的选项。它必须返回一个  Node.js 的 `Buffer` 对象的 promise，或者如果有意不加载资源则返回 `null`。一般来说，大多数情况下都希望像上面代码一样委托给 `super.fetch()`。
+jsdom 在遇到之前说到的“可用”资源时会调用自定义资源加载器的 `fetch()` 方法。该方法接受一个 URL 字符串，以及一些在调用 `super.fetch()` 时应透传的选项。它必须返回一个 Node.js 的 `Buffer` 对象的 promise，或者如果有意不加载资源则返回 `null`。一般来说，大多数情况下都希望像上面代码一样委托给 `super.fetch()`。
 
 可以在 `fetch()` 中收到的选项之一是获取资源的元素（如果适用）。
 
+<!-- prettier-ignore-start -->
 ```js
 class CustomResourceLoader extends jsdom.ResourceLoader {
   fetch(url, options) {
@@ -190,6 +211,7 @@ class CustomResourceLoader extends jsdom.ResourceLoader {
   }
 }
 ```
+<!-- prettier-ignore-end -->
 
 ### 虚拟控制台
 
@@ -197,13 +219,16 @@ class CustomResourceLoader extends jsdom.ResourceLoader {
 
 默认情况下，`JSDOM` 构造函数将返回一个具有虚拟控制台的实例，该虚拟控制台将其所有输出转发到 Node.js 控制台。为了创建自己的虚拟控制台并将其传递给 jsdom，可以通过执行下面代码来覆盖此默认值
 
+<!-- prettier-ignore-start -->
 ```js
 const virtualConsole = new jsdom.VirtualConsole();
 const dom = new JSDOM(``, { virtualConsole });
 ```
+<!-- prettier-ignore-end -->
 
 这样的代码将创建一个没有任何行为的虚拟控制台。您可以为所有可能的控制台方法添加事件侦听器来为其提供行为：
 
+<!-- prettier-ignore-start -->
 ```js
 virtualConsole.on("error", () => { ... });
 virtualConsole.on("warn", () => { ... });
@@ -211,14 +236,17 @@ virtualConsole.on("info", () => { ... });
 virtualConsole.on("dir", () => { ... });
 // ... etc. See https://console.spec.whatwg.org/#logging
 ```
+<!-- prettier-ignore-end -->
 
 （请注意，最好在调用 `new JSDOM()` 之前设置这些事件侦听器，因为在解析期间可能会发生错误或控制台调用脚本错误。）
 
 如果你只是想将虚拟控制台输出重定向到另一个控制台，比如默认的 Node.js，你可以这样做
 
+<!-- prettier-ignore-start -->
 ```js
 virtualConsole.sendTo(console);
 ```
+<!-- prettier-ignore-end -->
 
 还有一个特殊的事件，`"jsdomError"`，它的触发将通过错误对象来记录 jsdom 本身的错误。这与错误消息在 Web 浏览器控制台中的显示方式类似，即使它们不是由 console.error 输出的。到目前为止，错误会按照下面的方式输出：
 
@@ -228,9 +256,11 @@ virtualConsole.sendTo(console);
 
 如果您使用 `sendTo(c)` 将错误发送给 `c`，则默认情况下，它将使用来自`"jsdomError"`事件的信息调用 `c.error(errorStack[, errorDetail])`。如果您希望保持事件与方法调用的严格的一对一映射，并且可能自己处理`"jsdomError"`，那么您可以执行
 
+<!-- prettier-ignore-start -->
 ```js
 virtualConsole.sendTo(c, { omitJSDOMErrors: true });
 ```
+<!-- prettier-ignore-end -->
 
 ### Cookie 容器
 
@@ -238,10 +268,12 @@ virtualConsole.sendTo(c, { omitJSDOMErrors: true });
 
 默认情况下，`JSDOM` 构造函数将返回一个带有空 cookie 的实例。要创建自己的 cookie 容器并将其传递给 jsdom，可以通过以下代码来覆盖默认值
 
+<!-- prettier-ignore-start -->
 ```js
 const cookieJar = new jsdom.CookieJar(store, options);
 const dom = new JSDOM(``, { cookieJar });
 ```
+<!-- prettier-ignore-end -->
 
 如果您想要在多个 jsdom 中共享同一个 cookie 容器，或者提前使用特定的值来填充 cookie 容器，这将非常有用。
 
@@ -251,6 +283,7 @@ Cookie jar 由 [tough-cookie](https://www.npmjs.com/package/tough-cookie) 包提
 
 jsdom 允许您在很早的时候介入创建 jsdom：创建 Window 和 Document 对象之后，但在解析任何 HTML 并使用节点填充文档之前：
 
+<!-- prettier-ignore-start -->
 ```js
 const dom = new JSDOM(`<p>Hello</p>`, {
   beforeParse(window) {
@@ -259,6 +292,7 @@ const dom = new JSDOM(`<p>Hello</p>`, {
   }
 });
 ```
+<!-- prettier-ignore-end -->
 
 如果您想以某种方式修改环境，例如为 jsdom 不支持的 Web 平台 API 添加 shim，这将特别有用。
 
@@ -276,6 +310,7 @@ const dom = new JSDOM(`<p>Hello</p>`, {
 
 `serialize()` 方法将返回文档的 [HTML 序列化](https://html.spec.whatwg.org/#html-fragment-serialisation-algorithm)，包括 doctype：
 
+<!-- prettier-ignore-start -->
 ```js
 const dom = new JSDOM(`<!DOCTYPE html>hello`);
 
@@ -284,11 +319,13 @@ dom.serialize() === "<!DOCTYPE html><html><head></head><body>hello</body></html>
 // 对比:
 dom.window.document.documentElement.outerHTML === "<html><head></head><body>hello</body></html>";
 ```
+<!-- prettier-ignore-end -->
 
 ### 通过 `nodeLocation(node)` 获取节点的源位置信息
 
 `nodeLocation()`方法将查找 DOM 节点在源文档中的位置，并返回节点的 [parse5 位置信息](https://www.npmjs.com/package/parse5#options-locationinfo)：
 
+<!-- prettier-ignore-start -->
 ```js
 const dom = new JSDOM(
   `<p>Hello
@@ -308,6 +345,7 @@ console.log(dom.nodeLocation(pEl));      // { startOffset: 0, endOffset: 39, sta
 console.log(dom.nodeLocation(textNode)); // { startOffset: 3, endOffset: 13 }
 console.log(dom.nodeLocation(imgEl));    // { startOffset: 13, endOffset: 32 }
 ```
+<!-- prettier-ignore-end -->
 
 请注意，只有设置了 `includeNodeLocations` 选项才能使用此功能；由于性能原因这个选项默认为关闭。
 
@@ -317,6 +355,7 @@ Node.js 的内置 [`vm`](https://nodejs.org/api/vm.html) 模块是 jsdom 脚本�
 
 可以使用 `getInternalVMContext()` 方法获取与 `vm` API 一起使用的[上下文化的全局对象](https://nodejs.org/api/vm.html#vm_what_does_it_mean_to_contextify_an_object)：
 
+<!-- prettier-ignore-start -->
 ```js
 const { Script } = require("vm");
 
@@ -337,6 +376,7 @@ script.runInContext(vmContext);
 
 console.assert(dom.window.ran === 3);
 ```
+<!-- prettier-ignore-end -->
 
 这是高级功能，除非您有特殊的需求，否则我们建议坚持使用普通的 DOM API（如 `window.eval()` 或 `document.createElement("script")`）。
 
@@ -350,6 +390,7 @@ console.assert(dom.window.ran === 3);
 
 但是，如果您从 jsdom 窗口之外进行操作，例如在一些创建 jsdom 的测试框架中，可以使用特殊的 `reconfigure()` 方法覆盖其中的一个或两个：
 
+<!-- prettier-ignore-start -->
 ```js
 const dom = new JSDOM();
 
@@ -364,6 +405,7 @@ dom.reconfigure({
 dom.window.top === myFakeTopForTesting;
 dom.window.location.href === "https://example.com/";
 ```
+<!-- prettier-ignore-end -->
 
 请注意，更改 jsdom 的 URL 将影响所有返回当前 document URL 的 API，例如 `window.location`、`document.URL` 和 `document.documentURI `，以及文档中相对 URL 的解析以及同源检查和提取子资源时使用的来源。但是，它不会执行导航到该 URL 的内容；DOM 的内容将保持不变，并且不会创建 `Window`，`Document`等新的实例。
 
@@ -373,11 +415,13 @@ dom.window.location.href === "https://example.com/";
 
 除了 `JSDOM` 构造函数本身之外，jsdom 还提供了一个返回 Promise 的工厂方法，用于通过 URL 构建一个 jsdom 实例：
 
+<!-- prettier-ignore-start -->
 ```js
 JSDOM.fromURL("https://example.com/", options).then(dom => {
   console.log(dom.serialize());
 });
 ```
+<!-- prettier-ignore-end -->
 
 如果 URL 有效且请求成功，则 `onFullfilled` 回调执行并返回 `JSDOM` 实例。任何 URL 重定向都将遵循其最终目的地。
 
@@ -393,11 +437,13 @@ JSDOM.fromURL("https://example.com/", options).then(dom => {
 
 与 `fromURL()` 类似，jsdom 还提供了一个 `fromFile()` 工厂方法，用于从文件名构建 jsdom：
 
+<!-- prettier-ignore-start -->
 ```js
 JSDOM.fromFile("stuff.html", options).then(dom => {
   console.log(dom.serialize());
 });
 ```
+<!-- prettier-ignore-end -->
 
 如果可以打开给定的文件，则 `onFullfilled` 回调执行并返回 `JSDOM` 实例。和 Node.js API 一样，文件名是相对于当前工作目录的。
 
@@ -410,6 +456,7 @@ JSDOM.fromFile("stuff.html", options).then(dom => {
 
 对于最简单的情况，你可能不需要一个完整的 `JSDOM` 实例及其所有相关的功能。您甚至可能不需要 `Window` 或 `Document`！相反，你只需要解析一些 HTML 片段，并获得一个你可以操作的 DOM 对象。为此，我们提供了 `fragment()`，它可以从给定的字符串中创建一个` DocumentFragment`：
 
+<!-- prettier-ignore-start -->
 ```js
 const frag = JSDOM.fragment(`<p>Hello</p><p><strong>Hi!</strong>`);
 
@@ -417,6 +464,7 @@ frag.childNodes.length === 2;
 frag.querySelector("strong").textContent === "Hi!";
 // etc.
 ```
+<!-- prettier-ignore-end -->
 
 `frag` 是 [`DocumentFragment`](https://developer.mozilla.org/zh-CN/docs/Web/API/DocumentFragment) 的实例对象，其内容是通过提供的字符串解析创建的。解析是通过使用 `<template>` 元素完成的，因此您可以在其中包含任何元素（包括具有奇怪解析规则的元素，如 `<td>`）。还需要注意的是，生成的 `DocumentFragment` 不会有[关联的浏览上下文](https://html.spec.whatwg.org/multipage/#concept-document-bc)：即元素的 `ownerDocument` 将有一个空的 `defaultView` 属性，资源不会加载，等等。
 
@@ -424,10 +472,12 @@ frag.querySelector("strong").textContent === "Hi!";
 
 请注意，对 `DocumentFragments` 的序列化并不像使用 `JSDOM` 对象那样容易。如果你需要序列化你的 DOM ，你应该直接使用 `JSDOM` 构造函数。但对于包含单个元素的片段的特殊情况，通过常规方法就很容易做到。
 
+<!-- prettier-ignore-start -->
 ```js
 const frag = JSDOM.fragment(`<p>Hello</p>`);
 console.log(frag.firstChild.outerHTML); // logs "<p>Hello</p>"
 ```
+<!-- prettier-ignore-end -->
 
 ## 其他值得注意的功能
 
@@ -475,6 +525,7 @@ jsdom 的主要目标对象仍然是 Node.js，因此我们使用仅存在于最
 
 这个问题可以通过几种方法来解决。如果您能控制页面逻辑，最好的方法是使用脚本加载器提供的机制来检测何时加载完成。例如，如果您使用像 RequireJS 这样的模块加载器，代码可能如下所示：
 
+<!-- prettier-ignore-start -->
 ```js
 // On the Node.js side:
 const window = (new JSDOM(...)).window;
@@ -482,7 +533,9 @@ window.onModulesLoaded = () => {
   console.log("ready to roll!");
 };
 ```
+<!-- prettier-ignore-end -->
 
+<!-- prettier-ignore-start -->
 ```js
 <!-- Inside the HTML you supply to jsdom -->
 <script>
@@ -491,6 +544,7 @@ requirejs(["entry-module"], () => {
 });
 </script>
 ```
+<!-- prettier-ignore-end -->
 
 如果您不能控制该页面，则可以尝试其他解决方法，例如轮询检查特定元素是否存在。
 
@@ -509,7 +563,7 @@ requirejs(["entry-module"], () => {
 
 请注意，相同领域中的其他工具（如 PhantomJS）确实支持这些功能。在 wiki 上，我们有关于 [jsdom 与 PhantomJS 比较](https://github.com/jsdom/jsdom/wiki/jsdom-vs.-PhantomJS)的更完整的介绍。
 
-## 支持jsdom
+## 支持 jsdom
 
 jsdom 是一个社区驱动的项目，由[志愿者](https://github.com/orgs/jsdom/people)团队维护。您可以通过以下方式支持 jsdom：
 
@@ -523,3 +577,9 @@ jsdom 是一个社区驱动的项目，由[志愿者](https://github.com/orgs/js
 - [邮件组](https://groups.google.com/group/jsdom)（最好以 “how do I” 的形式提问）
 - [提 issue](https://github.com/jsdom/jsdom/issues)（最好用来提 bug）
 - Matrix 房间：[#jsdom:matrix.org](https://matrix.to/#/#jsdom:matrix.org)
+
+---
+
+原文地址：[jsdom/jsdom: A JavaScript implementation of various web standards, for use with Node.js](https://github.com/jsdom/jsdom)
+
+此翻译由 [zjffun/translated-document](https://github.com/zjffun/translated-document) 提供，在 GitHub 上[完善此翻译](https://github.com/zjffun/translated-document/edit/main/files/zh-cn/github/jsdom.md)。

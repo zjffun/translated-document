@@ -112,3 +112,9 @@ ECMAScript 6 将支持一种新的字符串转义序列，即 [Unicode 代码点
 1. 标题的字面翻译应该是臭名昭著的 BMP，但译者没有找到 BMP 臭名昭著的相关讨论，这里应该是捏他说唱歌手臭名昭著的大人物（The Notorious B.I.G.），为避免歧义翻译为 BMP 介绍。
 2. 《太玄经》中的符号，参见：<https://chukaml.tripod.com/linguistics/unicode/codeChart/U01D300.html>。
 3. ISO/IEC 10646-1 中 BMP 有多个集合，参见：<http://unicode.org/L2/L2010/10038-fcd10646-main.pdf>。
+
+---
+
+原文地址：[JavaScript’s internal character encoding: UCS-2 or UTF-16? · Mathias Bynens](https://mathiasbynens.be/notes/javascript-encoding)
+
+此翻译由 [zjffun/translated-document](https://github.com/zjffun/translated-document) 提供，在 GitHub 上[完善此翻译](https://github.com/zjffun/translated-document/edit/main/files/zh-cn/mathiasbynens.be/javascript-encoding.md)。

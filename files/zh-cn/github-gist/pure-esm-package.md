@@ -202,3 +202,9 @@ import {isWritableStream} from 'is-stream';
 
 isWritableStream(…);
 ```
+
+---
+
+原文地址：[Pure ESM package](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)
+
+此翻译由 [zjffun/translated-document](https://github.com/zjffun/translated-document) 提供，在 GitHub 上[完善此翻译](https://github.com/zjffun/translated-document/edit/main/files/zh-cn/github-gist/pure-esm-package.md)。
