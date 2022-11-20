@@ -1,920 +1,917 @@
 [
   {
     "id": "xeqbrbldro",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       1,
       18
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       1,
       18
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "t30sq6wto8",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       20,
       20
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       20,
       20
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "330t496j5v",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       22,
       33
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       22,
       33
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "qsd9ukat80",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       35,
       37
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       35,
       37
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "uljppyjw60",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       39,
       53
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       39,
       53
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "m4za1z024v",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       55,
       62
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       55,
       63
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "e5plfvd92f",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       64,
       66
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       65,
       67
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "1qd05rgfye",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       68,
       70
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       69,
       71
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "6au27snubl",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       72,
       74
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       73,
       75
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "cu1qito20w",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       76,
       78
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       77,
       79
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "l94zlbo2qn",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       80,
       82
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       81,
       83
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "3eznua6kak",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       84,
       86
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       85,
       87
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "blli5mvg3p",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       88,
       90
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       89,
       91
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "9szsfwee8o",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       92,
       94
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       93,
       95
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "geeo7wd604",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       96,
       118
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       97,
       119
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "ddmiconk1d",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       120,
       130
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       121,
       132
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "0x4mlhvysy",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       132,
       140
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       134,
       142
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "rrs18hohy9",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       142,
       152
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       144,
       154
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "71x8hinfqf",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       154,
       162
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       156,
       164
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "oqp1znxi9g",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       164,
       182
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       166,
       184
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "358iyd79a7",
-    "fromRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
     "fromPath": "files/en-us/github-gist/pure-esm-package.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
     "fromRange": [
       184,
       202
     ],
-    "toRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
-    "toPath": "files/zh-cn/github-gist/pure-esm-package.md",
-    "toBaseDir": "",
     "toRange": [
       186,
       204
-    ]
+    ],
+    "fromGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b",
+    "toGitRev": "89211568e53142ca5b97e6fe5f3fd150cc72b97b"
   },
   {
     "id": "lgcz3x1huh",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       1,
       8
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       1,
       8
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "l80cvqkmdm",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       10,
       34
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       10,
       34
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "xihngcp6f6",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       36,
       38
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       36,
       38
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "lt5gfna28o",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       40,
       58
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       40,
       58
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "ct35i3z2g3",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       60,
       107
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       60,
       107
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "8tesa6kqng",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       109,
       127
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       109,
       127
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "3hmv9izq9p",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       129,
       129
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       129,
       129
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "9u4ljtt9k2",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       131,
       140
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       131,
       140
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "k2h0kokto2",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       142,
       192
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       142,
       192
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "1pxbxzyhot",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       194,
       233
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       194,
       233
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "vqeu5yate6",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       235,
       248
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       235,
       248
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "61anbfi4oj",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       250,
       263
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       250,
       263
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "3yob5qro9e",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       265,
       267
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       265,
       267
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "jjewutq79j",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       269,
       273
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       269,
       273
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "siqwp3x00c",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       275,
       286
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       275,
       286
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "sihzi5nwx2",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       288,
       312
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       288,
       312
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "ro7u9iu4ia",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       314,
       343
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       314,
       343
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "ftakmeh5zd",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       345,
       365
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       345,
       368
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "qqr46ae3gc",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       367,
       367
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       370,
       370
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "5ikebmdxvh",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       369,
       387
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       372,
       390
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "nul4knxt1x",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       389,
       404
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       392,
       407
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "87upkqi5ha",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       406,
       427
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       409,
       430
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "pqxikd68vx",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       429,
       429
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       432,
       432
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "5e7wiuzlsw",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       431,
       433
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       434,
       436
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "ps2fg3rpsw",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       435,
       443
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       438,
       446
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "2cvpusuuhl",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       445,
       449
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       448,
       452
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "356ufthvsd",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       451,
       459
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       454,
       462
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "gsc91byj7u",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       461,
       465
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       464,
       468
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "1l54rpg9me",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       467,
       467
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       470,
       470
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "yww1p5jfgh",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       469,
       494
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       472,
       497
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "mu06v18ee9",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       496,
       507
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       499,
       510
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "v6ze54og8o",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       509,
       514
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       512,
       517
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
   },
   {
     "id": "19wr1yjyvt",
-    "fromRev": "9317de3beba6247513061c39e6328f0d9e1424de",
     "fromPath": "files/en-us/github/jsdom.md",
-    "fromBaseDir": "",
+    "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       516,
       522
     ],
-    "toRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toPath": "files/zh-cn/github/jsdom.md",
-    "toBaseDir": "",
     "toRange": [
       519,
       525
-    ]
+    ],
+    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
+    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+  },
+  {
+    "id": "bp0otnizv0",
+    "fromPath": "files/en-us/mathiasbynens.be/javascript-encoding.md",
+    "toPath": "files/zh-cn/mathiasbynens.be/javascript-encoding.md",
+    "fromRange": [
+      1,
+      7
+    ],
+    "toRange": [
+      1,
+      7
+    ],
+    "fromGitRev": "2c22786c6a9ecfd126411a3dc3b4e9eec160e24f",
+    "toGitRev": "2c22786c6a9ecfd126411a3dc3b4e9eec160e24f"
+  },
+  {
+    "id": "qsyeum0r8a",
+    "fromPath": "files/en-us/mathiasbynens.be/javascript-encoding.md",
+    "toPath": "files/zh-cn/mathiasbynens.be/javascript-encoding.md",
+    "fromRange": [
+      9,
+      17
+    ],
+    "toRange": [
+      9,
+      17
+    ],
+    "fromGitRev": "2c22786c6a9ecfd126411a3dc3b4e9eec160e24f",
+    "toGitRev": "2c22786c6a9ecfd126411a3dc3b4e9eec160e24f"
+  },
+  {
+    "id": "q6d6itfm4u",
+    "fromPath": "files/en-us/mathiasbynens.be/javascript-encoding.md",
+    "toPath": "files/zh-cn/mathiasbynens.be/javascript-encoding.md",
+    "fromRange": [
+      19,
+      27
+    ],
+    "toRange": [
+      19,
+      27
+    ],
+    "fromGitRev": "2c22786c6a9ecfd126411a3dc3b4e9eec160e24f",
+    "toGitRev": "2c22786c6a9ecfd126411a3dc3b4e9eec160e24f"
+  },
+  {
+    "id": "qreg1bp0gv",
+    "fromPath": "files/en-us/mathiasbynens.be/javascript-encoding.md",
+    "toPath": "files/zh-cn/mathiasbynens.be/javascript-encoding.md",
+    "fromRange": [
+      29,
+      37
+    ],
+    "toRange": [
+      29,
+      37
+    ],
+    "fromGitRev": "2c22786c6a9ecfd126411a3dc3b4e9eec160e24f",
+    "toGitRev": "2c22786c6a9ecfd126411a3dc3b4e9eec160e24f"
+  },
+  {
+    "id": "hzamb7nca3",
+    "fromPath": "files/en-us/mathiasbynens.be/javascript-encoding.md",
+    "toPath": "files/zh-cn/mathiasbynens.be/javascript-encoding.md",
+    "fromRange": [
+      39,
+      54
+    ],
+    "toRange": [
+      39,
+      54
+    ],
+    "fromGitRev": "2c22786c6a9ecfd126411a3dc3b4e9eec160e24f",
+    "toGitRev": "2c22786c6a9ecfd126411a3dc3b4e9eec160e24f"
+  },
+  {
+    "id": "91fneo2uar",
+    "fromPath": "files/en-us/mathiasbynens.be/javascript-encoding.md",
+    "toPath": "files/zh-cn/mathiasbynens.be/javascript-encoding.md",
+    "fromRange": [
+      56,
+      81
+    ],
+    "toRange": [
+      56,
+      84
+    ],
+    "fromGitRev": "2c22786c6a9ecfd126411a3dc3b4e9eec160e24f",
+    "toGitRev": "2c22786c6a9ecfd126411a3dc3b4e9eec160e24f"
+  },
+  {
+    "id": "c3quqbp3ul",
+    "fromPath": "files/en-us/mathiasbynens.be/javascript-encoding.md",
+    "toPath": "files/zh-cn/mathiasbynens.be/javascript-encoding.md",
+    "fromRange": [
+      83,
+      105
+    ],
+    "toRange": [
+      86,
+      108
+    ],
+    "fromGitRev": "2c22786c6a9ecfd126411a3dc3b4e9eec160e24f",
+    "toGitRev": "2c22786c6a9ecfd126411a3dc3b4e9eec160e24f"
   }
 ]
