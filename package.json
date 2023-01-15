@@ -6,7 +6,31 @@
   "repository": "git@github.com:zjffun/translated-document.git",
   "author": "Jufeng Zhang <zjffun@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "devDependencies": {
-    "relation2-cli": "^0.0.14"
+    "@types/glob": "^8.0.0",
+    "@types/node": "18.11.18",
+    "@types/react": "^18.0.26",
+    "autoprefixer": "^10.4.13",
+    "eslint": "8.32.0",
+    "eslint-config-next": "13.1.2",
+    "glob": "^8.1.0",
+    "gray-matter": "^4.0.3",
+    "relation2-cli": "^0.0.14",
+    "tailwindcss": "^3.2.4",
+    "typescript": "4.9.4"
+  },
+  "dependencies": {
+    "date-fns": "^2.29.3",
+    "next": "^13.1.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.1"
   }
 }
