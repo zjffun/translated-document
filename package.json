@@ -22,15 +22,25 @@
     "glob": "^8.1.0",
     "gray-matter": "^4.0.3",
     "relation2-cli": "^0.0.14",
+    "sass": "^1.57.1",
     "tailwindcss": "^3.2.4",
     "typescript": "4.9.4"
   },
   "dependencies": {
+    "@jsdevtools/rehype-toc": "^3.0.2",
+    "@microflash/rehype-starry-night": "^2.1.0",
+    "@wooorm/starry-night": "^1.5.0",
+    "classnames": "^2.3.2",
     "date-fns": "^2.29.3",
+    "github-markdown-css": "^5.1.0",
     "next": "^13.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "remark": "^14.0.2",
-    "remark-html": "^15.0.1"
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-slug": "^5.1.0",
+    "rehype-stringify": "^9.0.3",
+    "remark-parse": "^10.0.1",
+    "remark-rehype": "^10.1.0",
+    "unified": "^10.1.2"
   }
 }

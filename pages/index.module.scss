@@ -1,0 +1,18 @@
+.group {
+  margin: 0 0 1em 0;
+
+  &Title {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+}
+
+.docItem {
+  a {
+    color: #24292f;
+    &:hover {
+      color: #0969da;
+      text-decoration: underline;
+    }
+  }
+}
