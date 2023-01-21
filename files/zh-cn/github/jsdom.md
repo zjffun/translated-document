@@ -540,7 +540,7 @@ window.onModulesLoaded = () => {
 <!-- prettier-ignore-end -->
 
 <!-- prettier-ignore-start -->
-```js
+```html
 <!-- Inside the HTML you supply to jsdom -->
 <script>
 requirejs(["entry-module"], () => {

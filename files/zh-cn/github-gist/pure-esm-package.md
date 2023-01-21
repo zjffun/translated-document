@@ -1,3 +1,7 @@
+---
+title: 纯 ESM 包
+---
+
 # 纯 ESM 包
 
 链接到这里的包现在是纯 [ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)。它不能使用 CommonJS 的 `require()` 引入。

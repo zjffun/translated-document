@@ -1,3 +1,7 @@
+---
+title: JavaScript 的内部字符编码：UCS-2 还是 UTF-16？
+---
+
 # JavaScript 的内部字符编码：UCS-2 还是 UTF-16？
 
 2012 年 1 月 20 日发布 · 标记为 [JavaScript](https://mathiasbynens.be/notes#javascript), [Unicode](https://mathiasbynens.be/notes#unicode)
