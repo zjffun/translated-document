@@ -338,11 +338,11 @@
       34
     ],
     "toRange": [
-      10,
-      34
+      14,
+      44
     ],
-    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+    "fromGitRev": "a675d325f191d5af1cdb8278cb27136395f28dcf",
+    "toGitRev": "a675d325f191d5af1cdb8278cb27136395f28dcf"
   },
   {
     "id": "xihngcp6f6",
@@ -368,11 +368,11 @@
       58
     ],
     "toRange": [
-      40,
-      58
+      50,
+      70
     ],
-    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+    "fromGitRev": "a675d325f191d5af1cdb8278cb27136395f28dcf",
+    "toGitRev": "a675d325f191d5af1cdb8278cb27136395f28dcf"
   },
   {
     "id": "ct35i3z2g3",
@@ -383,11 +383,11 @@
       107
     ],
     "toRange": [
-      60,
-      107
+      72,
+      125
     ],
-    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+    "fromGitRev": "a675d325f191d5af1cdb8278cb27136395f28dcf",
+    "toGitRev": "a675d325f191d5af1cdb8278cb27136395f28dcf"
   },
   {
     "id": "8tesa6kqng",
@@ -398,11 +398,11 @@
       127
     ],
     "toRange": [
-      109,
-      127
+      127,
+      147
     ],
-    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+    "fromGitRev": "a675d325f191d5af1cdb8278cb27136395f28dcf",
+    "toGitRev": "a675d325f191d5af1cdb8278cb27136395f28dcf"
   },
   {
     "id": "3hmv9izq9p",
@@ -440,59 +440,59 @@
     "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
       142,
-      192
+      190
     ],
     "toRange": [
-      142,
-      192
+      162,
+      216
     ],
-    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+    "fromGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b",
+    "toGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b"
   },
   {
     "id": "1pxbxzyhot",
     "fromPath": "files/en-us/github/jsdom.md",
     "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
-      194,
-      233
+      192,
+      231
     ],
     "toRange": [
-      194,
-      233
+      218,
+      265
     ],
-    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+    "fromGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b",
+    "toGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b"
   },
   {
     "id": "vqeu5yate6",
     "fromPath": "files/en-us/github/jsdom.md",
     "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
-      235,
-      248
+      233,
+      246
     ],
     "toRange": [
-      235,
-      248
+      267,
+      282
     ],
-    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+    "fromGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b",
+    "toGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b"
   },
   {
     "id": "61anbfi4oj",
     "fromPath": "files/en-us/github/jsdom.md",
     "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
-      250,
-      263
+      248,
+      261
     ],
     "toRange": [
-      250,
-      263
+      284,
+      299
     ],
-    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+    "fromGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b",
+    "toGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b"
   },
   {
     "id": "3yob5qro9e",
@@ -529,60 +529,60 @@
     "fromPath": "files/en-us/github/jsdom.md",
     "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
-      275,
-      286
+      273,
+      284
     ],
     "toRange": [
-      275,
-      286
+      311,
+      324
     ],
-    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+    "fromGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b",
+    "toGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b"
   },
   {
     "id": "sihzi5nwx2",
     "fromPath": "files/en-us/github/jsdom.md",
     "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
-      288,
-      312
+      286,
+      310
     ],
     "toRange": [
-      288,
-      312
+      326,
+      352
     ],
-    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+    "fromGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b",
+    "toGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b"
   },
   {
     "id": "ro7u9iu4ia",
     "fromPath": "files/en-us/github/jsdom.md",
     "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
-      314,
-      343
+      312,
+      341
     ],
     "toRange": [
-      314,
-      343
+      354,
+      385
     ],
-    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+    "fromGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b",
+    "toGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b"
   },
   {
     "id": "ftakmeh5zd",
     "fromPath": "files/en-us/github/jsdom.md",
     "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
-      345,
-      365
+      343,
+      363
     ],
     "toRange": [
-      345,
-      368
+      387,
+      412
     ],
-    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+    "fromGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b",
+    "toGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b"
   },
   {
     "id": "qqr46ae3gc",
@@ -604,45 +604,45 @@
     "fromPath": "files/en-us/github/jsdom.md",
     "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
-      369,
-      387
+      367,
+      385
     ],
     "toRange": [
-      372,
-      390
+      416,
+      436
     ],
-    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+    "fromGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b",
+    "toGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b"
   },
   {
     "id": "nul4knxt1x",
     "fromPath": "files/en-us/github/jsdom.md",
     "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
-      389,
-      404
+      387,
+      402
     ],
     "toRange": [
-      392,
-      407
+      438,
+      455
     ],
-    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+    "fromGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b",
+    "toGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b"
   },
   {
     "id": "87upkqi5ha",
     "fromPath": "files/en-us/github/jsdom.md",
     "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
-      406,
-      427
+      404,
+      425
     ],
     "toRange": [
-      409,
-      430
+      457,
+      481
     ],
-    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+    "fromGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b",
+    "toGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b"
   },
   {
     "id": "pqxikd68vx",
@@ -724,15 +724,15 @@
     "fromPath": "files/en-us/github/jsdom.md",
     "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
-      461,
-      465
+      459,
+      463
     ],
     "toRange": [
-      464,
-      468
+      516,
+      520
     ],
-    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+    "fromGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b",
+    "toGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b"
   },
   {
     "id": "1l54rpg9me",
@@ -754,30 +754,30 @@
     "fromPath": "files/en-us/github/jsdom.md",
     "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
-      469,
-      494
+      467,
+      492
     ],
     "toRange": [
-      472,
-      497
+      524,
+      553
     ],
-    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+    "fromGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b",
+    "toGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b"
   },
   {
     "id": "mu06v18ee9",
     "fromPath": "files/en-us/github/jsdom.md",
     "toPath": "files/zh-cn/github/jsdom.md",
     "fromRange": [
-      496,
+      494,
       507
     ],
     "toRange": [
-      499,
-      510
+      555,
+      568
     ],
-    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+    "fromGitRev": "5996abda1025dc8186e5d0919a170ded93c186f4",
+    "toGitRev": "5996abda1025dc8186e5d0919a170ded93c186f4"
   },
   {
     "id": "v6ze54og8o",
@@ -788,11 +788,11 @@
       514
     ],
     "toRange": [
-      512,
-      517
+      568,
+      573
     ],
-    "fromGitRev": "9317de3beba6247513061c39e6328f0d9e1424de",
-    "toGitRev": "9317de3beba6247513061c39e6328f0d9e1424de"
+    "fromGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b",
+    "toGitRev": "372e547f37dfeb739e9ba0bacae25871d934627b"
   },
   {
     "id": "19wr1yjyvt",
