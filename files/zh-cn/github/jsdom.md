@@ -556,6 +556,8 @@ requirejs(["entry-module"], () => {
 
 目前 jsdom 中有很多缺失的 API，尽管我们也想要在 jsdom 中添加新的功能并保持最新的 Web 规范。请随时为缺失的任何内容提交 issue，但我们是一个很小并且忙碌的团队，因此大家一起来提交 pull request 可能会更好。
 
+jsdom 的一些特性是由我们的依赖项提供的。这方面值得注意的文档包括我们的 [CSS 选择器引擎](https://github.com/dperini/nwsapi/wiki/CSS-supported-selectors) [`nwsapi`](https://github.com/dperini/nwsapi)。
+
 除了我们尚未拥有的功能之外，还有两个主要功能目前超出了 jsdom 的范围。这些是：
 
 - **导航**：在点击链接或赋值 `location.href` 或类似操作时可以更改全局对象和所有其他的对象。
