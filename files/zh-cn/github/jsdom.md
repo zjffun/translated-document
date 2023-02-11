@@ -161,8 +161,6 @@ window.requestAnimationFrame(timestamp => {
 
 #### 高级配置
 
-_这个资源加载器系统是 jsdom v12.0.0 的新系统，我们希望您能就它是否满足您的需求以及它的易用性提供反馈。请提 issue 进行讨论！_
-
 要更全面地自定义 jsdom 的资源加载行为，可以将 `ResourceLoader` 类的实例作为 `resources` 选项值传递：
 
 <!-- prettier-ignore-start -->
@@ -182,7 +180,7 @@ const dom = new JSDOM(``, { resources: resourceLoader });
 - `strictSSL` 可以设置为 false 以禁用 SSL 证书有效的要求。
 - `userAgent` 影响发送的 `User-Agent` 标头，从而影响 `navigator.userAgent` 的结果值。 它默认为 <code>\`Mozilla/5.0 (${process.platform || "unknown OS"}) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/${jsdomVersion}\`</code>。
 
-您可以通过继承 `ResourceLoader` 并覆盖 `fetch()` 方法来进一步自定义资源获取。 例如，指定资源返回的内容：
+您可以通过继承 `ResourceLoader` 并覆盖 `fetch()` 方法来进一步自定义资源获取。例如，覆盖指定 URL 返回的内容：
 
 <!-- prettier-ignore-start -->
 ```js
