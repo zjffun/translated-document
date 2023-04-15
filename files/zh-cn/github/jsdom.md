@@ -7,11 +7,23 @@ title: jsdom 中文文档
     jsdom
 </h1>
 
+test
+
 jsdom 是一个纯粹由 JavaScript 实现的一系列 Web 标准，特别是 WHATWG 组织制定的 [DOM](https://dom.spec.whatwg.org/) 和 [HTML](https://html.spec.whatwg.org/multipage/) 标准，用于在 Node.js 中使用。大体上来说，该项目的目标是模拟足够的 Web 浏览器子集，以便用于测试和挖掘真实世界的 Web 应用程序。
 
 最新版本的 jsdom 运行环境需要 Node.js v14 或者更高的版本。（jsdom v20 以下版本依旧可以在 Node.js 以前的版本使用，但是我们已经不支持维护了。）
 
 ## 基本用法
+
+
+
+
+
+
+
+
+
+test1
 
 <!-- prettier-ignore-start -->
 ```js
@@ -48,6 +60,9 @@ const { document } = (new JSDOM(`...`)).window;
 `JSDOM` 构造函数接受第二个参数，可以用以下方式定制您的 jsdom。
 
 ### 简单选项
+
+
+test2222
 
 <!-- prettier-ignore-start -->
 ```js
@@ -126,6 +141,18 @@ window.document.body.children.length === 1;
 
 ### 假装成一个视觉浏览器
 
+test2
+
+
+
+
+
+
+
+
+
+
+
 jsdom 没有渲染可视内容的能力，并且默认情况下会像无头浏览器一样工作。它通过 API（如 `document.hidden`）向网页提供提示，表明其内容不可见。
 
 当 `pretendToBeVisual` 选项设置为 true 时，jsdom 会假装它正在呈现并显示内容。它是这样做的：
@@ -149,6 +176,22 @@ window.requestAnimationFrame(timestamp => {
 ### 加载子资源
 
 #### 基础选项
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 默认情况下，jsdom 不会加载任何子资源，如脚本，样式表，图像或 iframe。如果您希望 jsdom 加载这些资源，则可以传递 `resources: "usable"` 选项，该选项将加载所有可用资源。资源列表如下：
 
