@@ -9,7 +9,7 @@ title: jsdom 中文文档
 
 jsdom 是一个纯粹由 JavaScript 实现的一系列 Web 标准，特别是 WHATWG 组织制定的 [DOM](https://dom.spec.whatwg.org/) 和 [HTML](https://html.spec.whatwg.org/multipage/) 标准，用于在 Node.js 中使用。大体上来说，该项目的目标是模拟足够的 Web 浏览器子集，以便用于测试和挖掘真实世界的 Web 应用程序。
 
-最新版本的 jsdom 运行环境需要 Node.js v14 或者更高的版本。（jsdom v20 以下版本依旧可以在 Node.js 以前的版本使用，但是我们已经不支持维护了。）
+最新版本的 jsdom 运行环境需要 Node.js v16 或者更高的版本。（jsdom v22 以下版本依旧可以在 Node.js 以前的版本使用，但是我们已经不支持维护了。）
 
 ## 基本用法
 
@@ -502,16 +502,6 @@ jsdom 支持使用 [`canvas`](https://www.npmjs.com/package/canvas) 包来扩展
 jsdom 中定义的定时器（通过 `window.setTimeout()` 或 `window.setInterval()` 设置）将在 window 上下文中执行代码。由于进程在不活跃的情况下无法执行未来的定时器代码，所以卓越的 jsdom 定时器将保持您的 Node.js 进程处于活动状态。同样，对象不活跃的情况下也没有办法在对象的上下文中执行代码，卓越的 jsdom 定时器将阻止垃圾回收调度它们的 window。
 
 如果你想确保关闭 jsdom 窗口，使用 `window.close()`，它将终止所有正在运行的定时器（并且还会删除 `window` 和 `document` 上的任何事件监听器）。
-
-### 在 Web 浏览器中运行 jsdom
-
-使用 [browserify](http://browserify.org/) 模块，jsdom 某些方面也支持在 Web 浏览器中运行。也就是说，在 Web 浏览器中，您可以使用被 `browserify` 模块编译过的 jsdom 去创建完全独立的普通 JavaScript 对象集，其外观和行为与浏览器的现有 DOM 对象非常相似，但完全独立于它们，也就是“虚拟 DOM”！
-
-jsdom 的主要目标对象仍然是 Node.js，因此我们使用仅存在于最新 Node.js 版本中的语言特性功能。因此，在旧版浏览器可能无法正常工作。（即使编译也不会有多大帮助：我们在整个 jsdom 代码库中广泛使用 `Proxy`。）
-
-值得注意的是，jsdom 在 Web Worker 中能很好的运行。项目的开发者 [@lawnsea](https://github.com/lawnsea/) 使这一功能点成为可能，他发表了一篇关于他的[项目的论文](https://pdfs.semanticscholar.org/47f0/6bb6607a975500a30e9e52d7c9fbc0034e27.pdf)，该论文就使用了这种能力。
-
-在 Web 浏览器中运行 jsdom 时，并非所有的工作都完美。有些情况下，这是由于基础的条件限制（比如没有文件系统访问），但有些情况下也是因为我们没有花足够的时间去进行适当的小调整。欢迎大家来提 bug。
 
 ### 使用 Chrome 开发者工具调试 DOM
 
