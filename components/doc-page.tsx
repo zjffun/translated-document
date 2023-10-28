@@ -39,9 +39,7 @@ export default function DocPage({ doc, preview }: docPageProps) {
               )}
             >
               <Head>
-                <title>
-                  {doc.title} | {CMS_NAME}
-                </title>
+                <title>{`${doc.title} | ${CMS_NAME}`}</title>
               </Head>
               {/* <PostHeader title={doc.title || doc.slug} date={doc.date} /> */}
               <div className={classnames(docPageCss["post-body"])}>
