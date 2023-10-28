@@ -1,6 +1,6 @@
 # Pure ESM package
 
-The package linked to from here is now pure [ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules). It cannot be `require()`'d from CommonJS.
+The package that linked you here is now pure [ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules). It cannot be `require()`'d from CommonJS.
 
 This means you have the following choices:
 
@@ -9,11 +9,9 @@ This means you have the following choices:
 2. If the package is used in an async context, you could use [`await import(…)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#dynamic_imports) from CommonJS instead of `require(…)`.
 3. Stay on the existing version of the package until you can move to ESM.
 
-**You also need to make sure you're on the latest minor version of Node.js. At minimum Node.js 12.20, 14.14, or 16.0.**
+**You also need to make sure you're on the latest minor version of Node.js. At minimum Node.js 16.**
 
 I would strongly recommend moving to ESM. ESM can still import CommonJS packages, but CommonJS packages cannot import ESM packages synchronously.
-
-ESM is natively supported by Node.js 12 and later.
 
 **My repos are not the place to ask ESM/TypeScript/Webpack/Jest/ts-node/CRA support questions.**
 
@@ -23,12 +21,12 @@ ESM is natively supported by Node.js 12 and later.
 
 - Add `"type": "module"` to your package.json.
 - Replace `"main": "index.js"` with `"exports": "./index.js"` in your package.json.
-- Update the `"engines"` field in package.json to Node.js 14: `"node": ">=14.16"`. (Excluding Node.js 12 as it's no longer supported)
+- Update the `"engines"` field in package.json to Node.js 16: `"node": ">=16"`.
 - Remove `'use strict';` from all JavaScript files.
 - Replace all `require()`/`module.export` with `import`/`export`.
 - Use only full relative file paths for imports: `import x from '.';` → `import x from './index.js';`.
 - If you have a TypeScript type definition (for example, `index.d.ts`), update it to use ESM imports/exports.
-- Optional but recommended, use the [`node:` protocol](https://nodejs.org/api/esm.html#esm_node_imports) for imports.
+- Use the [`node:` protocol](https://nodejs.org/api/esm.html#esm_node_imports) for Node.js built-in imports.
 
 Sidenote: If you're looking for guidance on how to add types to your JavaScript package, [check out my guide](https://github.com/sindresorhus/typescript-definition-style-guide).
 
@@ -38,28 +36,25 @@ Yes, but you need to convert your project to output ESM. See below.
 
 ### How can I make my TypeScript project output ESM?
 
+[Read the official ESM guide.](https://www.typescriptlang.org/docs/handbook/esm-node.html)
+
+Quick steps:
+
 - Make sure you are using TypeScript 4.7 or later.
 - Add `"type": "module"` to your package.json.
 - Replace `"main": "index.js"` with `"exports": "./index.js"` in your package.json.
-- Update the `"engines"` field in package.json to Node.js 14: `"node": ">=14.16"`. (Excluding Node.js 12 as it's no longer supported)
+- Update the `"engines"` field in package.json to Node.js 16: `"node": ">=16"`.
 - Add [`"module": "node16", "moduleResolution": "node16"`](https://www.typescriptlang.org/tsconfig#module) to your tsconfig.json. *([Example](https://github.com/sindresorhus/tsconfig/blob/main/tsconfig.json))*
 - Use only full relative file paths for imports: `import x from '.';` → `import x from './index.js';`.
 - Remove `namespace` usage and use `export` instead.
-- Optional but recommended, use the [`node:` protocol](https://nodejs.org/api/esm.html#esm_node_imports) for imports.
+- Use the [`node:` protocol](https://nodejs.org/api/esm.html#esm_node_imports) for Node.js built-in imports.
 - **You must use a `.js` extension in relative imports even though you're importing `.ts` files.**
 
-Also make sure to read the [official TypeScript guide](https://devblogs.microsoft.com/typescript/announcing-typescript-4-7-beta/#ecmascript-module-support-in-node-js).
-
-If you use `ts-node`, follow [this guide](https://github.com/TypeStrong/ts-node/issues/1007).
+If you use `ts-node`, follow [this guide](https://github.com/TypeStrong/ts-node/issues/1007). [Example config.](https://github.com/sindresorhus/got/blob/5f278d74125608b7abe75941cb6a71e21e0fb892/tsconfig.json#L17-L21)
 
 ### How can I import ESM in Electron?
 
-[Electron doesn't yet support ESM natively.](https://github.com/electron/electron/issues/21457)
-
-You have the following options:
-1. Stay on the previous version of the package in question.
-2. Bundle your dependencies with Webpack into a CommonJS bundle.
-3. Use the [`esm`](https://github.com/standard-things/esm) package.
+Electron supports ESM as of Electron 28 (not out yet as of this writing). [Please read this.](https://github.com/electron/electron/blob/main/docs/tutorial/esm-limitations.md)
 
 ### I'm having problems with ESM and Webpack
 
@@ -67,19 +62,21 @@ The problem is either Webpack or your Webpack configuration. First, ensure you a
 
 ### I'm having problems with ESM and Next.js
 
-You must enable the [experimental support for ESM](https://nextjs.org/blog/next-11-1#es-modules-support).
+Upgrade to [Next.js 12](https://nextjs.org/blog/next-12#es-modules-support-and-url-imports) which has full ESM support.
 
 ### I'm having problems with ESM and Jest
 
-[Read this first.](https://github.com/facebook/jest/blob/64de4d7361367fd711a231d25c37f3be89564264/docs/ECMAScriptModules.md) The problem is either Jest ([#9771](https://github.com/facebook/jest/issues/9771)) or your Jest configuration. First, ensure you are on the latest version of Jest. Please don't open an issue on my repo. Try asking on Stack Overflow or [open an issue the Jest repo](https://github.com/facebook/jest).
+[Read this.](https://jestjs.io/docs/ecmascript-modules)
 
 ### I'm having problems with ESM and TypeScript
 
-If you have decided to make your project ESM (`"type": "module"` in your package.json), make sure you have [`"module": "nodenext"`](https://www.typescriptlang.org/tsconfig#module) in your tsconfig.json and that all your import statements to local files use the `.js` extension, **not** `.ts` or no extension.
+If you have decided to make your project ESM (`"type": "module"` in your package.json), make sure you have [`"module": "node16"`](https://www.typescriptlang.org/tsconfig#module) in your tsconfig.json and that all your import statements to local files use the `.js` extension, **not** `.ts` or no extension.
 
 ### I'm having problems with ESM and `ts-node`
 
 Follow [this guide](https://github.com/TypeStrong/ts-node/issues/1007) and ensure you are on the latest version of `ts-node`.
+
+[Example config.](https://github.com/sindresorhus/got/blob/5f278d74125608b7abe75941cb6a71e21e0fb892/tsconfig.json#L17-L21)
 
 ### I'm having problems with ESM and Create React App
 
