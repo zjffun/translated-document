@@ -4,7 +4,7 @@ title: 纯 ESM 包
 
 # 纯 ESM 包
 
-链接到这里的包现在是纯 [ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)。它不能使用 CommonJS 的 `require()` 引入。
+链接里的包现在是纯 [ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)。它不能使用 CommonJS 的 `require()` 引入。
 
 这意味着你有以下选择：
 
@@ -13,11 +13,9 @@ title: 纯 ESM 包
 2. 如果是在异步上下文中使用包，你可以在 CommonJS 中使用 [`await import(...)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#dynamic_imports)，而不是 `require(...)`。
 3. 继续使用该软件包的现有（CommonJS）版本，直到你可以迁移到 ESM。
 
-**你还需要确保你使用的是最新的 Node.js 次要版本。至少 Node.js 12.20、14.14 或 16.0。**
+**你还需要确保你使用的是最新的 Node.js 次要版本。至少 Node.js 16。**
 
 我强烈建议迁移到 ESM。 ESM 仍然可以导入 CommonJS 包，但是 CommonJS 包不能同步地导入 ESM 包。
-
-Node.js 12 及更高版本原生支持 ESM。
 
 **我的仓库不是问 ESM/TypeScript/Webpack/Jest/ts-node/CRA 支持问题的地方。**
 
@@ -27,12 +25,12 @@ Node.js 12 及更高版本原生支持 ESM。
 
 - 将 `"type": "module"` 添加到你的 package.json。
 - 将 package.json 中的 `"main": "index.js"` 替换为 `"exports": "./index.js"`。
-- 将 package.json 中的 `"engines"` 字段更新为 Node.js 14: `"node": ">=14.16"`。 （不包括 Node.js 12，因为它不再受支持）
+- 将 package.json 中的 `"engines"` 字段更新为 Node.js 16: `"node": ">=16"`。
 - 从所有 JavaScript 文件中删除 `'use strict';`。
 - 将所有 `require()`/`module.export` 替换为 `import`/`export`。
 - 仅使用完整的相对文件路径进行导入：`import x from '.';` → `import x from './index.js';`。
 - 如果你有 TypeScript 类型定义（例如，`index.d.ts`），请将其更新为使用 ESM 导入/导出。
-- 可选但建议使用 [`node:` 协议](https://nodejs.org/api/esm.html#esm_node_imports) 进行导入。
+- 使用 [`node:` 协议](https://nodejs.org/api/esm.html#esm_node_imports)导入 Node.js 内置模块。
 
 旁注：如果你正在寻找有关如何向 JavaScript 包添加类型的指导，[查看我的指南](https://github.com/sindresorhus/typescript-definition-style-guide)。
 
@@ -42,29 +40,26 @@ Node.js 12 及更高版本原生支持 ESM。
 
 ### 如何让我的 TypeScript 项目输出 ESM？
 
+[读官方 ESM 指导。](https://www.typescriptlang.org/docs/handbook/esm-node.html)
+
+快速步骤：
+
 - 确保你使用的是 TypeScript 4.7 或更高版本。
 - 将 `"type": "module"` 添加到你的 package.json。
 - 将 package.json 中的 `"main": "index.js"` 替换为 `"exports": "./index.js"`。
-- 将 package.json 中的 `"engines"` 字段更新为 Node.js 14: `"node": ">=14.16"`。 （不包括 Node.js 12，因为它不再受支持）
+- 将 package.json 中的 `"engines"` 字段更新为 Node.js 16: `"node": ">=16"`。
 - 将 [`"module": "node16", "moduleResolution": "node16"`](https://www.typescriptlang.org/tsconfig#module) 添加到你的 tsconfig.json。 _([示例](https://github.com/sindresorhus/tsconfig/blob/main/tsconfig.json))_
 - 仅使用完整的相对文件路径进行导入：`import x from '.';` → `import x from './index.js';`。
 - 删除 `namespace` 的使用并改用 `export`。
-- 可选但建议使用 [`node:` 协议](https://nodejs.org/api/esm.html#esm_node_imports) 进行导入。
+- 使用 [`node:` 协议](https://nodejs.org/api/esm.html#esm_node_imports)导入 Node.js 内置模块。
 - **即使你正在导入 `.ts` 文件，你也必须在相对导入中使用 `.js` 扩展名。**
 
-还要确保阅读[官方 TypeScript 指南](https://devblogs.microsoft.com/typescript/announcing-typescript-4-7-beta/#ecmascript-module-support-in-node-js)。
-
-如果你使用 `ts-node`，请遵循[本指南](https://github.com/TypeStrong/ts-node/issues/1007)。
+如果你使用 `ts-node`，请遵循[本指南](https://github.com/TypeStrong/ts-node/issues/1007)。[示例配置。](https://github.com/sindresorhus/got/blob/5f278d74125608b7abe75941cb6a71e21e0fb892/tsconfig.json#L17-L21)
 
 ### 如何在 Electron 中导入 ESM？
+Electron 从 Electron 28 开始支持 ESM（在撰写本文时尚未推出）。[请读这篇文档。](https://github.com/electron/electron/blob/main/docs/tutorial/esm-limitations.md)
 
-[Electron 还没有原生地支持 ESM。](https://github.com/electron/electron/issues/21457)
 
-你有以下选择：
-
-1. 使用有问题的软件包的前一个版本。
-2. 使用 Webpack 将你的依赖项打包为 CommonJS。
-3. 使用 [`esm`](https://github.com/standard-things/esm) 包。
 
 ### 使用 ESM 和 Webpack 时遇到问题
 
@@ -72,19 +67,21 @@ Node.js 12 及更高版本原生支持 ESM。
 
 ### 使用 ESM 和 Next.js 时遇到问题
 
-你必须启用 [ESM 的实验性支持](https://nextjs.org/blog/next-11-1#es-modules-support)。
+升级到 [Next.js 12](https://nextjs.org/blog/next-12#es-modules-support-and-url-imports) 将完全支持 ESM.
 
 ### 使用 ESM 和 Jest 时遇到问题
 
-[首先阅读这个文档。](https://github.com/facebook/jest/blob/64de4d7361367fd711a231d25c37f3be89564264/docs/ECMAScriptModules.md) 这个问题出在 Jest ([#9771](https://github.com/facebook/jest/issues/9771)) 或你的 Jest 配置。首先，确保你使用的是最新版本的 Jest。请不要在我的仓库中提 issue。尝试在 Stack Overflow 上提问或 [给 Jest 提 issue](https://github.com/facebook/jest)。
+[读这个文档。](https://jestjs.io/docs/ecmascript-modules)
 
 ### 使用 ESM 和 TypeScript 时遇到问题
 
-如果你决定让你的项目使用 ESM（将 `"type": "module"` 设置在你的 package.json 中），请确保 [`"module": "nodenext"`](https://www.typescriptlang.org/tsconfig#module) 在你的 tsconfig.json 文件中，并且你对本地文件的所有导入语句都使用 `.js` 扩展名，**而不是** `.ts` 或不使用扩展名。
+如果你决定让你的项目使用 ESM（将 `"type": "module"` 设置在你的 package.json 中），请确保 [`"module": "node16"`](https://www.typescriptlang.org/tsconfig#module) 在你的 tsconfig.json 文件中，并且你对本地文件的所有导入语句都使用 `.js` 扩展名，**而不是** `.ts` 或不使用扩展名。
 
 ### 遇到了 ESM 和 `ts-node` 的问题
 
 遵循[本指南](https://github.com/TypeStrong/ts-node/issues/1007) 并确保你使用的是最新版本的 `ts-node`。
+
+[示例配置。](https://github.com/sindresorhus/got/blob/5f278d74125608b7abe75941cb6a71e21e0fb892/tsconfig.json#L17-L21)
 
 ### 使用 ESM 和 Create React App 时遇到问题
 
