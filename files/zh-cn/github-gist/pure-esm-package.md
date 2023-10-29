@@ -30,7 +30,7 @@ title: 纯 ESM 包
 - 将所有 `require()`/`module.export` 替换为 `import`/`export`。
 - 仅使用完整的相对文件路径进行导入：`import x from '.';` → `import x from './index.js';`。
 - 如果你有 TypeScript 类型定义（例如，`index.d.ts`），请将其更新为使用 ESM 导入/导出。
-- 使用 [`node:` 协议](https://nodejs.org/api/esm.html#esm_node_imports) 导入 Node.js 内置模块。
+- 使用 [`node:` 协议](https://nodejs.org/api/esm.html#esm_node_imports)导入 Node.js 内置模块。
 
 旁注：如果你正在寻找有关如何向 JavaScript 包添加类型的指导，[查看我的指南](https://github.com/sindresorhus/typescript-definition-style-guide)。
 
@@ -51,7 +51,7 @@ title: 纯 ESM 包
 - 将 [`"module": "node16", "moduleResolution": "node16"`](https://www.typescriptlang.org/tsconfig#module) 添加到你的 tsconfig.json。 _([示例](https://github.com/sindresorhus/tsconfig/blob/main/tsconfig.json))_
 - 仅使用完整的相对文件路径进行导入：`import x from '.';` → `import x from './index.js';`。
 - 删除 `namespace` 的使用并改用 `export`。
-- 使用 [`node:` 协议](https://nodejs.org/api/esm.html#esm_node_imports) 导入 Node.js 内置模块。
+- 使用 [`node:` 协议](https://nodejs.org/api/esm.html#esm_node_imports)导入 Node.js 内置模块。
 - **即使你正在导入 `.ts` 文件，你也必须在相对导入中使用 `.js` 扩展名。**
 
 如果你使用 `ts-node`，请遵循[本指南](https://github.com/TypeStrong/ts-node/issues/1007)。[示例配置](https://github.com/sindresorhus/got/blob/5f278d74125608b7abe75941cb6a71e21e0fb892/tsconfig.json#L17-L21)
