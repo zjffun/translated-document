@@ -54,7 +54,7 @@ title: 纯 ESM 包
 - 使用 [`node:` 协议](https://nodejs.org/api/esm.html#esm_node_imports)导入 Node.js 内置模块。
 - **即使你正在导入 `.ts` 文件，你也必须在相对导入中使用 `.js` 扩展名。**
 
-如果你使用 `ts-node`，请遵循[本指南](https://github.com/TypeStrong/ts-node/issues/1007)。[示例配置](https://github.com/sindresorhus/got/blob/5f278d74125608b7abe75941cb6a71e21e0fb892/tsconfig.json#L17-L21)
+如果你使用 `ts-node`，请遵循[本指南](https://github.com/TypeStrong/ts-node/issues/1007)。[示例配置。](https://github.com/sindresorhus/got/blob/5f278d74125608b7abe75941cb6a71e21e0fb892/tsconfig.json#L17-L21)
 
 ### 如何在 Electron 中导入 ESM？
 Electron 从 Electron 28 开始支持 ESM（在撰写本文时尚未推出）。[请读这篇文档。](https://github.com/electron/electron/blob/main/docs/tutorial/esm-limitations.md)
